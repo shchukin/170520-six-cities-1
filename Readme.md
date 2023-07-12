@@ -1,7 +1,7 @@
 # Личный проект «Шесть городов»
 
 * Студент: [Антон Щукин](https://up.htmlacademy.ru/react-individual/1/user/170520).
-* Наставник: `Неизвестно`.
+* Наставник: [Богдан Волик](https://htmlacademy.ru/profile/id997699).
 
 ---
 
