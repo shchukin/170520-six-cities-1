@@ -1,8 +1,13 @@
 import Main from './../../pages/main/main';
 
-function App(): JSX.Element {
+
+type App = {
+  offersAmountOnMainPage: number;
+}
+
+function App({offersAmountOnMainPage}: App): JSX.Element {
   return (
-    <Main offersAmount={5}/>
+    <Main offersAmount={offersAmountOnMainPage}/>
   );
 }
 
