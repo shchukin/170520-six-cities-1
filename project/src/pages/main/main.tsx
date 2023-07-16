@@ -5,15 +5,14 @@ type PlaceCardProps = {
 }
 
 function Main({offersAmount}: PlaceCardProps): JSX.Element {
-
-  return(
+  return (
     <div className="page page--gray page--main">
       <header className="header">
         <div className="container">
           <div className="header__wrapper">
             <div className="header__left">
               <a className="header__logo-link header__logo-link--active">
-                <img className="header__logo" src="img/logo.svg" alt="6 cities logo" width="81" height="41" />
+                <img className="header__logo" src="img/logo.svg" alt="6 cities logo" width="81" height="41"/>
               </a>
             </div>
             <nav className="header__nav">
@@ -96,10 +95,9 @@ function Main({offersAmount}: PlaceCardProps): JSX.Element {
                 </ul>
               </form>
               <div className="cities__places-list places__list tabs__content">
-                <div className="cities__card">
-                  ${offersAmount}
-                  <PlaceCard/>
-                </div>
+                {
+                  Array.from(Array(offersAmount), (e, i) => <div className={'cities__card'} key={i}><PlaceCard/></div>)
+                }
               </div>
             </section>
             <div className="cities__right-section">
