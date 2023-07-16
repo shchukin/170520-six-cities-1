@@ -1,6 +1,11 @@
 import PlaceCard from '../../components/place-card/place-card';
 
-function Main(): JSX.Element {
+type PlaceCardProps = {
+  offersAmount: number;
+}
+
+function Main({offersAmount}: PlaceCardProps): JSX.Element {
+
   return(
     <div className="page page--gray page--main">
       <header className="header">
@@ -91,27 +96,9 @@ function Main(): JSX.Element {
                 </ul>
               </form>
               <div className="cities__places-list places__list tabs__content">
-
                 <div className="cities__card">
-                  <PlaceCard />
+                  <PlaceCard/>
                 </div>
-
-                <div className="cities__card">
-                  <PlaceCard />
-                </div>
-
-                <div className="cities__card">
-                  <PlaceCard />
-                </div>
-
-                <div className="cities__card">
-                  <PlaceCard />
-                </div>
-
-                <div className="cities__card">
-                  <PlaceCard />
-                </div>
-
               </div>
             </section>
             <div className="cities__right-section">
