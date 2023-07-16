@@ -1,6 +1,5 @@
 import Main from './../../pages/main/main';
 
-
 type App = {
   offersAmountOnMainPage: number;
 }

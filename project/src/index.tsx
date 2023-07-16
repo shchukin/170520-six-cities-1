@@ -12,6 +12,6 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    <App offersAmountOnMainPage = {settings.OffersAmountOnMainPage} />
+    <App offersAmountOnMainPage = {settings.OffersAmountOnMainPage}/>
   </React.StrictMode>,
 );
