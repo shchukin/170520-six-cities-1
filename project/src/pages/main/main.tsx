@@ -97,6 +97,7 @@ function Main({offersAmount}: PlaceCardProps): JSX.Element {
               </form>
               <div className="cities__places-list places__list tabs__content">
                 <div className="cities__card">
+                  ${offersAmount}
                   <PlaceCard/>
                 </div>
               </div>
