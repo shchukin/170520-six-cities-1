@@ -1,6 +1,6 @@
 import {Link} from 'react-router-dom';
 
-function Error(): JSX.Element {
+function HttpError(): JSX.Element {
   return (
     <div className="page page--error">
       <header className="header">
@@ -55,6 +55,6 @@ function Error(): JSX.Element {
   );
 }
 
-export default Error;
+export default HttpError;
 
 
