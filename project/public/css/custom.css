@@ -23,15 +23,16 @@
 }
   .error__wrapper {
     width: 420px;
-    margin-top: 16.7vh;
+    margin-top: 15vh;
     margin-right: auto;
     margin-left: auto;
-    padding-top: 94px;
+    padding-top: 40px;
+    padding-bottom: 50px;
     text-align: center;
   }
     .error__title {
       margin-top: 0;
-      margin-bottom: 5px;
+      margin-bottom: 10px;
       font-weight: bold;
       font-size: 42px;
       line-height: 1.1875;
@@ -39,6 +40,15 @@
 
     .error__message {
       padding: 0 30px;
+      margin-bottom: 20px;
       font-size: 20px;
       line-height: 1.5;
     }
+
+    .error__back {
+      color: #4481C3;
+    }
+      .error__arrow {
+        margin-left: -8px; /* better visual alignment */
+        font-family: 'Tahoma', sans-serif;
+      }
