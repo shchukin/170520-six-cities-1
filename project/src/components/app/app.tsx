@@ -17,7 +17,7 @@ function App({offersAmountOnMainPage}: App): JSX.Element {
         <Route path="/" element={<Main offersAmount={offersAmountOnMainPage}/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/favorites" element={<Favorites/>}/>
-        <Route path="/offer/:id" element={<Property/>}/>
+        <Route path="/offer/:offerId" element={<Property/>}/>
         <Route path="*" element={<Error/>}/>
       </Routes>
     </BrowserRouter>
