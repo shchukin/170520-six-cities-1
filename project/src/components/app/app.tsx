@@ -18,7 +18,12 @@ function App({offersAmountOnMainPage}: App): JSX.Element {
       <Routes>
         <Route path={AppRoute.Root} element={<Main offersAmount={offersAmountOnMainPage}/>}/>
         <Route path={AppRoute.Login} element={<Login/>}/>
-        <Route path={AppRoute.Favorites} element={<Favorites/>}/>
+        <Route path={AppRoute.Favorites} element={
+          <PrivateRoute authorizationStatus={AuthorizationStatus.Auth}>
+            <Favorites/>
+          </PrivateRoute>
+        }
+        />
         <Route path={AppRoute.Offer} element={<Property/>}/>
         <Route path="*" element={<HttpError/>}/>
       </Routes>
