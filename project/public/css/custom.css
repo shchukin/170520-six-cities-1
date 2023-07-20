@@ -1,3 +1,4 @@
+/* http error page */
 .page--error {
   display: flex;
   flex-direction: column;
@@ -15,13 +16,15 @@
       flex-direction: column;
     }
 
-.error {
+
+/* http error */
+.http-error {
   flex-grow: 1;
   width: 100%;
   padding: 0 0 93px 38px;
   border-bottom: 2px solid rgba(222, 222, 222, .5);
 }
-  .error__wrapper {
+  .http-error__wrapper {
     width: 420px;
     margin-top: 15vh;
     margin-right: auto;
@@ -30,7 +33,7 @@
     padding-bottom: 50px;
     text-align: center;
   }
-    .error__title {
+    .http-error__title {
       margin-top: 0;
       margin-bottom: 10px;
       font-weight: bold;
@@ -38,22 +41,23 @@
       line-height: 1.1875;
     }
 
-    .error__message {
+    .http-error__message {
       padding: 0 30px;
       margin-bottom: 20px;
       font-size: 20px;
       line-height: 1.5;
     }
 
-    .error__back {
+    .http-error__back {
       color: #4481C3;
     }
-      .error__arrow {
+      .http-error__arrow {
         margin-left: -8px; /* better visual alignment */
         font-family: 'Tahoma', sans-serif;
       }
 
 
+/* weird padding that pushes off footer too much */
 .page__main--property {
   padding-bottom: 0;
 }
