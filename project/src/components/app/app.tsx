@@ -8,15 +8,15 @@ import Property from '../../pages/property/property';
 import HttpError from '../../pages/http-error/http-error';
 import PrivateRoute from '../private-route/private-route';
 
-type App = {
+type AppProps = {
   offersAmountOnMainPage: number;
 }
 
-function App({offersAmountOnMainPage}: App): JSX.Element {
+function App(props: AppProps): JSX.Element {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path={AppRoute.Root} element={<Main offersAmount={offersAmountOnMainPage}/>}/>
+        <Route path={AppRoute.Root} element={<Main offersAmount={props.offersAmountOnMainPage}/>}/>
         <Route path={AppRoute.Login} element={<Login/>}/>
         <Route path={AppRoute.Favorites} element={
           <PrivateRoute authorizationStatus={AuthorizationStatus.Auth}>
