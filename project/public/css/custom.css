@@ -63,15 +63,19 @@
 }
 
 
-.header__logo-link {
+/* Addition to existing Header component */
+.header__branding {
   margin-bottom: 15px
 }
 
-.header__logo-link:not(.header__logo-link--active):focus, .header__logo-link:not(.header__logo-link--active):hover {
-  opacity: .5
+
+/* New Logo component */
+
+.logo {
+
 }
 
-
-.header__logo-link:not(.header__logo-link--active):focus, .header__logo-link:not(.header__logo-link--active):hover {
+.logo:not(.logo--active):focus,
+.logo:not(.logo--active):hover {
   opacity: .5
 }

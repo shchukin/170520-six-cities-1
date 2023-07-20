@@ -3,8 +3,8 @@ import {AppRoute} from '../../const';
 
 function Logo(): JSX.Element {
   return (
-    <NavLink to={AppRoute.Root} className={({isActive}) => isActive ? 'header__logo-link header__logo-link--active' : 'header__logo-link'}>
-      <img className="header__logo" src="img/logo.svg" alt="6 cities logo" width="81" height="41"/>
+    <NavLink to={AppRoute.Root} end className={({isActive}) => isActive ? 'logo logo--active' : 'logo'}>
+      <img src="img/logo.svg" alt="6 cities logo" width="81" height="41"/>
     </NavLink>
   );
 }
