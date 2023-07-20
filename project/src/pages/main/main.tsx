@@ -1,5 +1,6 @@
 import PlaceCard from '../../components/place-card/place-card';
 import Header from '../../components/header/header';
+import Footer from '../../components/footer/footer';
 
 type PlaceCardProps = {
   offersAmount: number;
@@ -8,7 +9,7 @@ type PlaceCardProps = {
 function Main({offersAmount}: PlaceCardProps): JSX.Element {
   return (
     <div className="page page--gray page--main">
-      {<Header/>}
+      <Header/>
       <main className="page__main page__main--index">
         <h1 className="visually-hidden">Cities</h1>
         <div className="tabs">
@@ -72,6 +73,7 @@ function Main({offersAmount}: PlaceCardProps): JSX.Element {
                   Array.from(Array(offersAmount), (e, i) => <div className={'cities__card'} key={i}><PlaceCard/></div>)
                 }
               </div>
+              <Footer noContainer/>
             </section>
             <div className="cities__right-section">
               <section className="cities__map map"></section>
@@ -79,6 +81,7 @@ function Main({offersAmount}: PlaceCardProps): JSX.Element {
           </div>
         </div>
       </main>
+
     </div>
   );
 }

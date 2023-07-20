@@ -1,7 +1,7 @@
 import Logo from '../logo/logo';
 
 type HeaderProps = {
-  hideUserArea?: boolean;
+  noUserArea?: boolean;
 }
 
 function Header(props: HeaderProps): JSX.Element {
@@ -14,7 +14,7 @@ function Header(props: HeaderProps): JSX.Element {
             {<Logo/>}
           </div>
           {
-            !props.hideUserArea &&
+            !props.noUserArea &&
             <nav className="header__nav">
               <ul className="header__nav-list">
                 <li className="header__nav-item user">

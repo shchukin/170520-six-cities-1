@@ -1,9 +1,10 @@
 import Header from '../../components/header/header';
+import Footer from '../../components/footer/footer';
 
 function Property(): JSX.Element {
   return (
     <div className="page">
-      {<Header/>}
+      <Header/>
       <main className="page__main page__main--property">
         <section className="property">
           <div className="property__gallery-container container">
@@ -307,6 +308,7 @@ function Property(): JSX.Element {
           </section>
         </div>
       </main>
+      <Footer/>
     </div>
   );
 }
