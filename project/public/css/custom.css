@@ -1,0 +1,81 @@
+/* NotFound page */
+.page--error {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+  .page__main--error {
+    padding-top: 11px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+    .page__error-container {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+
+/* HttpError component */
+.http-error {
+  flex-grow: 1;
+  width: 100%;
+  padding: 0 0 93px 38px;
+  border-bottom: 2px solid rgba(222, 222, 222, .5);
+}
+  .http-error__wrapper {
+    width: 420px;
+    margin-top: 15vh;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 40px;
+    padding-bottom: 50px;
+    text-align: center;
+  }
+    .http-error__title {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-weight: bold;
+      font-size: 42px;
+      line-height: 1.1875;
+    }
+
+    .http-error__message {
+      padding: 0 30px;
+      margin-bottom: 20px;
+      font-size: 20px;
+      line-height: 1.5;
+    }
+
+    .http-error__back {
+      color: #4481C3;
+    }
+      .http-error__arrow {
+        margin-left: -8px; /* better visual alignment */
+        font-family: 'Tahoma', sans-serif;
+      }
+
+
+/* weird padding that pushes off footer too much */
+.page__main--property {
+  padding-bottom: 0;
+}
+
+
+/* Addition to existing Header component */
+.header__branding {
+  margin-bottom: 15px
+}
+
+
+/* New Logo component */
+
+.logo {
+
+}
+
+.logo:not(.logo--active):focus,
+.logo:not(.logo--active):hover {
+  opacity: .5
+}
