@@ -1,4 +1,4 @@
-/* http error page */
+/* NotFound page */
 .page--error {
   display: flex;
   flex-direction: column;
@@ -17,7 +17,7 @@
     }
 
 
-/* http error */
+/* HttpError component */
 .http-error {
   flex-grow: 1;
   width: 100%;
@@ -60,4 +60,18 @@
 /* weird padding that pushes off footer too much */
 .page__main--property {
   padding-bottom: 0;
+}
+
+
+.header__logo-link {
+  margin-bottom: 15px
+}
+
+.header__logo-link:not(.header__logo-link--active):focus, .header__logo-link:not(.header__logo-link--active):hover {
+  opacity: .5
+}
+
+
+.header__logo-link:not(.header__logo-link--active):focus, .header__logo-link:not(.header__logo-link--active):hover {
+  opacity: .5
 }
