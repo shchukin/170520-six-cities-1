@@ -1,4 +1,5 @@
 import {HostType} from '../types/hostType';
+import {HousingKindType} from './housingKindType';
 
 export type OfferType = {
   id: number,
@@ -6,7 +7,7 @@ export type OfferType = {
   premium: boolean,
   ratingInStars: number,
   priceNightEuro: number,
-  kind: string,
+  kind: HousingKindType,
   bedrooms: number,
   maxAdults: number,
   description: string,
@@ -14,9 +15,5 @@ export type OfferType = {
   amenities: string[],
   host: HostType
 }
-
-// Housing kind
-// apartment (Apartment), room (Private Room), house (House), hotel (Hotel).
-
 
 // srats number 0-5
