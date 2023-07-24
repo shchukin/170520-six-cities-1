@@ -5,6 +5,7 @@ import {offersData} from './mocks/offersData';
 
 const settings = {
   OffersAmountOnMainPage: 4,
+  // MaxPhotoOnDetailedPage: 6,
 } as const;
 
 const root = ReactDOM.createRoot(
