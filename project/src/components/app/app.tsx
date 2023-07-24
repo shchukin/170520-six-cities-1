@@ -19,7 +19,7 @@ function App(props: AppProps): JSX.Element {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path={AppRoute.Root} element={<Main offersAmount={props.offersAmountOnMainPage} offersData={props.offersData}/>}/>
+        <Route path={AppRoute.Root} element={<Main offersData={props.offersData}/>}/>
         <Route path={AppRoute.Login} element={<Login/>}/>
         <Route path={AppRoute.Favorites} element={
           <PrivateRoute authorizationStatus={AuthorizationStatus.Auth}>

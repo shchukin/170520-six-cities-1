@@ -4,11 +4,11 @@ import Footer from '../../components/footer/footer';
 import {OfferType} from '../../types/offerType';
 
 type PlaceCardProps = {
-  offersAmount: number;
   offersData: OfferType[];
 }
 
-function Main({offersAmount}: PlaceCardProps): JSX.Element {
+function Main(props: PlaceCardProps): JSX.Element {
+
   return (
     <div className="page page--gray page--main">
       <Header/>
@@ -70,10 +70,11 @@ function Main({offersAmount}: PlaceCardProps): JSX.Element {
                   <li className="places__option" tabIndex={0}>Top rated first</li>
                 </ul>
               </form>
-              <div className="cities__places-list places__list tabs__content">
-                {
-                  Array.from(Array(offersAmount), (e, i) => <div className={'cities__card'} key={i}><PlaceCard/></div>)
-                }
+              <div className="cities__places-list places__list tabs__content">{
+                props.offersData.map( (element, index) => { return(
+                  <div className={'cities__card'} key={index}><PlaceCard data={element}/></div>
+                )} )
+              }
               </div>
               <Footer noContainer/>
             </section>

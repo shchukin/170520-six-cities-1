@@ -1,4 +1,11 @@
-function PlaceCard(): JSX.Element {
+import {OfferType} from '../../types/offerType';
+
+type PlaceCardProps = {
+  data: OfferType;
+}
+
+function PlaceCard(props: PlaceCardProps): JSX.Element {
+
   return (
     <article className="place-card">
       <div className="place-card__mark">
@@ -29,7 +36,7 @@ function PlaceCard(): JSX.Element {
           </div>
         </div>
         <h2 className="place-card__name">
-          <a href="#">Beautiful &amp; luxurious apartment at great location</a>
+          <a href="#">{props.data.title}</a>
         </h2>
         <p className="place-card__type">Apartment</p>
       </div>
