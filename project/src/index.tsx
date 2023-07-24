@@ -4,7 +4,7 @@ import App from './components/app/app';
 import {offersData} from './mocks/offersData';
 
 const settings = {
-  OffersAmountOnMainPage: 5,
+  OffersAmountOnMainPage: 4,
 } as const;
 
 const root = ReactDOM.createRoot(

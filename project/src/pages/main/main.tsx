@@ -71,9 +71,7 @@ function Main(props: PlaceCardProps): JSX.Element {
                 </ul>
               </form>
               <div className="cities__places-list places__list tabs__content">{
-                props.offersData.map( (element, index) => { return(
-                  <div className={'cities__card'} key={index}><PlaceCard data={element}/></div>
-                )} )
+                props.offersData.map( (element, index) => <div className={'cities__card'} key={index}><PlaceCard data={element}/></div>)
               }
               </div>
               <Footer noContainer/>
