@@ -1,3 +1,5 @@
+import {HostType} from '../types/hostType';
+
 export type OfferType = {
   id: number,
   title: string,
@@ -10,7 +12,7 @@ export type OfferType = {
   description: string,
   photo: string[],
   amenities: string[],
-  host: any
+  host: HostType
 }
 
 // Housing kind
