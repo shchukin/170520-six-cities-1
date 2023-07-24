@@ -10,3 +10,10 @@ export enum AuthorizationStatus {
   NoAuth = 'NO_AUTH',
   Unknown = 'UKNOWN',
 }
+
+export const HOUSING_KINDS = {
+  'apartment': 'Apartment',
+  'room': 'Private Room',
+  'house': 'House',
+  'hotel': 'Hotel',
+};

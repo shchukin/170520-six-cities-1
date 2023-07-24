@@ -5,7 +5,7 @@ export type OfferType = {
   id: number,
   title: string,
   premium: boolean,
-  ratingInStars: number,
+  ratingInStars: number, /* можно ли сделать [0 - 5]? */
   priceNightEuro: number,
   kind: HousingKindType,
   bedrooms: number,
@@ -15,5 +15,3 @@ export type OfferType = {
   amenities: string[],
   host: HostType
 }
-
-// srats number 0-5
