@@ -12,6 +12,7 @@ export type OfferType = {
   maxAdults: number,
   description: string,
   photo: string[],
+  featuredPhoto: number,
   amenities: string[],
   host: HostType
 }
