@@ -1,9 +1,11 @@
 import PlaceCard from '../../components/place-card/place-card';
 import Header from '../../components/header/header';
 import Footer from '../../components/footer/footer';
+import {OfferType} from '../../types/offerType';
 
 type PlaceCardProps = {
   offersAmount: number;
+  offersData: OfferType[];
 }
 
 function Main({offersAmount}: PlaceCardProps): JSX.Element {
