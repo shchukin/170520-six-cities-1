@@ -4,7 +4,7 @@ import App from './components/app/app';
 import {offersData} from './mocks/offersData';
 
 const settings = {
-  OffersAmountOnMainPage: 4,
+  OffersAmountOnMainPage: 5,
   // MaxPhotoOnDetailedPage: 6,
 } as const;
 

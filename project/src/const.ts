@@ -16,4 +16,4 @@ export const HOUSING_KINDS = {
   'room': 'Private Room',
   'house': 'House',
   'hotel': 'Hotel',
-};
+} as const;
