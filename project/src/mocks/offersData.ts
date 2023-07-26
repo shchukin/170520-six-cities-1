@@ -20,4 +20,80 @@ export const offersData: OfferType[] = [
       'pro': true
     }
   },
+  {
+    'id': 2,
+    'title': 'Wood and stone place',
+    'premium': false,
+    'ratingInStars': 4,
+    'priceNightEuro': 80,
+    'kind': 'room',
+    'bedrooms': 1,
+    'maxAdults': 2,
+    'description': 'This charming cottage nestled in a tranquil forest setting offers the perfect escape from the hustle and bustle of daily life.\n\nIts rustic interior and private garden make it an ideal spot for nature lovers seeking a peaceful retreat',
+    'photo': ['img/apartment-02.jpg', 'img/apartment-01.jpg', 'img/apartment-03.jpg'],
+    'featuredPhoto': 2,
+    'amenities': ['Wi-Fi', 'Washing machine', 'Towels', 'Heating', 'Coffee machine', 'Baby seat', 'Kitchen', 'Dishwasher', 'Cabel TV', 'Fridge'],
+    'host': {
+      'photo': 'img/avatar-angelina.jpg',
+      'name': 'Valery',
+      'pro': true
+    }
+  },
+  {
+    'id': 3,
+    'title': 'Canal View Prinsengracht',
+    'premium': false,
+    'ratingInStars': 4.2,
+    'priceNightEuro': 132,
+    'kind': 'apartment',
+    'bedrooms': 4,
+    'maxAdults': 9,
+    'description': 'Urban Oasis.\n\nA modern, stylish apartment located in the heart of the city.\n\nWith floor-to-ceiling windows that provide stunning skyline views, this property is a sanctuary in the midst of the urban jungle.',
+    'photo': ['img/apartment-03.jpg', 'img/apartment-02.jpg', 'img/apartment-01.jpg'],
+    'featuredPhoto': 1,
+    'amenities': ['Wi-Fi', 'Washing machine', 'Towels', 'Heating', 'Coffee machine', 'Baby seat', 'Kitchen', 'Dishwasher', 'Cabel TV', 'Fridge'],
+    'host': {
+      'photo': 'img/avatar-angelina.jpg',
+      'name': 'Valery',
+      'pro': true
+    }
+  },
+  {
+    'id': 4,
+    'title': 'Nice, cozy, warm big bed apartment',
+    'premium': true,
+    'ratingInStars': 5,
+    'priceNightEuro': 180,
+    'kind': 'apartment',
+    'bedrooms': 3,
+    'maxAdults': 5,
+    'description': 'Urban Oasis.\n\nA modern, stylish apartment located in the heart of the city.\n\nWith floor-to-ceiling windows that provide stunning skyline views, this property is a sanctuary in the midst of the urban jungle.',
+    'photo': ['img/apartment-03.jpg', 'img/apartment-02.jpg', 'img/apartment-01.jpg'],
+    'featuredPhoto': 1,
+    'amenities': ['Wi-Fi', 'Washing machine', 'Towels', 'Heating', 'Coffee machine', 'Baby seat', 'Kitchen', 'Dishwasher', 'Cabel TV', 'Fridge'],
+    'host': {
+      'photo': 'img/avatar-angelina.jpg',
+      'name': 'Dany',
+      'pro': false
+    }
+  },
+  {
+    'id': 5,
+    'title': 'Wood and stone place',
+    'premium': false,
+    'ratingInStars': 3.5,
+    'priceNightEuro': 80,
+    'kind': 'hotel',
+    'bedrooms': 2,
+    'maxAdults': 4,
+    'description': 'This beachfront villa boasts breathtaking ocean views and direct access to a pristine sandy beach. With spacious outdoor decks and a private pool, it\'s a luxurious getaway for those seeking a beachside paradise.',
+    'photo': ['img/apartment-03.jpg', 'img/apartment-02.jpg', 'img/apartment-01.jpg'],
+    'featuredPhoto': 1,
+    'amenities': ['Wi-Fi', 'Washing machine', 'Towels', 'Heating', 'Coffee machine', 'Baby seat', 'Kitchen', 'Dishwasher', 'Cabel TV', 'Fridge'],
+    'host': {
+      'photo': 'img/avatar-angelina.jpg',
+      'name': 'Elon',
+      'pro': false
+    }
+  },
 ];
