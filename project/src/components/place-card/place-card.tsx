@@ -1,6 +1,7 @@
+import {Link} from 'react-router-dom';
 import {OfferType} from '../../types/offerType';
 import {starsToPct} from '../../utils';
-import {HOUSING_KINDS} from '../../const';
+import {AppRoute, HOUSING_KINDS} from '../../const';
 
 type PlaceCardProps = {
   data: OfferType;
@@ -17,9 +18,9 @@ function PlaceCard(props: PlaceCardProps): JSX.Element {
         </div>
       }
       <div className="place-card__image-wrapper">
-        <a href="#">
+        <Link to={AppRoute.Offer + '/' + props.data.id}>
           <img className="place-card__image" src={props.data.photo[props.data.featuredPhoto]} width="260" height="200" alt="Place image"/>
-        </a>
+        </Link>
       </div>
       <div className="place-card__info">
         <div className="place-card__price-wrapper">
@@ -41,7 +42,7 @@ function PlaceCard(props: PlaceCardProps): JSX.Element {
           </div>
         </div>
         <h2 className="place-card__name">
-          <a href="#">{props.data.title}</a>
+          <Link to={'offer/' + props.data.id}>{props.data.title}</Link>
         </h2>
         <p className="place-card__type">{HOUSING_KINDS[props.data.kind]}</p>
       </div>
