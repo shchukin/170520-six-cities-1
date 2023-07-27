@@ -2,7 +2,7 @@ import {OfferType} from '../types/offerType';
 
 export const offersData: OfferType[] = [
   {
-    'id': 1,
+    'id': 0,
     'title': 'Beautiful & luxurious apartment at great location',
     'premium': true,
     'ratingInStars': 4.5,
@@ -21,7 +21,7 @@ export const offersData: OfferType[] = [
     }
   },
   {
-    'id': 2,
+    'id': 1,
     'title': 'Wood and stone place',
     'premium': false,
     'ratingInStars': 4,
@@ -40,7 +40,7 @@ export const offersData: OfferType[] = [
     }
   },
   {
-    'id': 3,
+    'id': 2,
     'title': 'Canal View Prinsengracht',
     'premium': false,
     'ratingInStars': 4.2,
@@ -48,8 +48,8 @@ export const offersData: OfferType[] = [
     'kind': 'apartment',
     'bedrooms': 4,
     'maxAdults': 9,
-    'description': 'Urban Oasis.\n\nA modern, stylish apartment located in the heart of the city.\n\nWith floor-to-ceiling windows that provide stunning skyline views, this property is a sanctuary in the midst of the urban jungle.',
-    'photo': ['img/apartment-03.jpg', 'img/apartment-02.jpg', 'img/apartment-01.jpg'],
+    'description': 'Urban Oasis.\n\nA modern, stylish apartment located in the heart of the city.\n\nWith floor-to-ceiling windows that provide stunning skyline views,\n this property is a sanctuary in the midst of the urban jungle.',
+    'photo': ['img/apartment-03.jpg', 'img/apartment-02.jpg', 'img/apartment-01.jpg', 'img/apartment-03.jpg', 'img/apartment-02.jpg', 'img/apartment-01.jpg', 'img/apartment-03.jpg', 'img/apartment-02.jpg', 'img/apartment-01.jpg'],
     'featuredPhoto': 1,
     'amenities': ['Wi-Fi', 'Washing machine', 'Towels', 'Heating', 'Coffee machine', 'Baby seat', 'Kitchen', 'Dishwasher', 'Cabel TV', 'Fridge'],
     'host': {
@@ -59,7 +59,7 @@ export const offersData: OfferType[] = [
     }
   },
   {
-    'id': 4,
+    'id': 3,
     'title': 'Nice, cozy, warm big bed apartment',
     'premium': true,
     'ratingInStars': 5,
@@ -78,7 +78,7 @@ export const offersData: OfferType[] = [
     }
   },
   {
-    'id': 5,
+    'id': 4,
     'title': 'Artistic Loft Studio',
     'premium': false,
     'ratingInStars': 3.5,
