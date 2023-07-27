@@ -1,12 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './components/app/app';
-import {offersData} from './mocks/offersData';
-
-const settings = {
-  OffersAmountOnMainPage: 5,
-  // MaxPhotoOnDetailedPage: 6,
-} as const;
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
@@ -14,6 +8,6 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    <App offersAmountOnMainPage = {settings.OffersAmountOnMainPage} offersData={offersData}/>
+    <App/>
   </React.StrictMode>,
 );

@@ -7,19 +7,13 @@ import Favorites from './../../pages/favorites/favorites';
 import Property from '../../pages/property/property';
 import NotFound from '../../pages/not-found/not-found';
 import PrivateRoute from '../private-route/private-route';
-import {OfferType} from '../../types/offerType';
 
-type AppProps = {
-  offersAmountOnMainPage: number;
-  offersData: OfferType[];
-}
-
-function App(props: AppProps): JSX.Element {
+function App(): JSX.Element {
 
   return (
     <BrowserRouter>
       <Routes>
-        <Route path={AppRoute.Root} element={<Main offersData={props.offersData.slice(0, props.offersAmountOnMainPage)}/>}/>
+        <Route path={AppRoute.Root} element={<Main/>}/>
         <Route path={AppRoute.Login} element={<Login/>}/>
         <Route path={AppRoute.Favorites} element={
           <PrivateRoute authorizationStatus={AuthorizationStatus.Auth}>

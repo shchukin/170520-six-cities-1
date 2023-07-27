@@ -96,4 +96,23 @@ export const offersData: OfferType[] = [
       'pro': false
     }
   },
+  {
+    'id': 5,
+    'title': 'Yet Anoter loft studio',
+    'premium': true,
+    'ratingInStars': 1,
+    'priceNightEuro': 30,
+    'kind': 'hotel',
+    'bedrooms': 2,
+    'maxAdults': 4,
+    'description': 'A secluded mountain lodge surrounded by towering peaks and lush forests. This cozy, log cabin-style property is perfect for winter retreats or summer adventures in nature.',
+    'photo': [],
+    'featuredPhoto': 0,
+    'amenities': ['Wi-Fi'],
+    'host': {
+      'photo': 'img/avatar-angelina.jpg',
+      'name': 'Martin',
+      'pro': false
+    }
+  },
 ];
