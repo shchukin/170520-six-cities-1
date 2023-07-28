@@ -27,7 +27,7 @@ function Property(): JSX.Element {
         <section className="property">
           <div className="property__gallery-container container">
             <div className="property__gallery">
-              {data.photo.slice(0, settings.MaxPhotoOnDetailedPage).map((element) => <div className="property__image-wrapper"><img src={element} alt="Photo studio"/></div>)}
+              {data.photo.slice(0, settings.MaxPhotoOnDetailedPage).map((element) => <div className="property__image-wrapper" key={crypto.randomUUID()}><img src={element} alt="Photo studio"/></div>)}
             </div>
           </div>
           <div className="property__container container">
@@ -74,7 +74,7 @@ function Property(): JSX.Element {
               <div className="property__inside">
                 <h2 className="property__inside-title">What&apos;s inside</h2>
                 <ul className="property__inside-list">
-                  {data.amenities.map((element) => <li className="property__inside-item">{element}</li>)}
+                  {data.amenities.map((element) => <li className="property__inside-item" key={crypto.randomUUID()}>{element}</li>)}
                 </ul>
               </div>
               <div className="property__host">
