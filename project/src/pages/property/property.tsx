@@ -6,19 +6,31 @@ import {offersData} from '../../mocks/offersData';
 import {pluralize, starsToPct} from '../../utils';
 import {HOUSING_KINDS} from '../../const';
 import {settings} from '../../settings';
+import NotFound from '../not-found/not-found';
 
 function Property(): JSX.Element {
 
+  /* Проверяем полученный айди на undefined */
+
   const potentialOfferId: string | undefined = useParams().offerId;
-  let OfferId;
 
   if (potentialOfferId === undefined) {
-    return (<div>404</div>);
-  } else {
-    OfferId = Number(potentialOfferId);
+    return <NotFound/>;
+  }
+
+  const OfferId = Number(potentialOfferId);
+
+
+  /* Проверяем полученный айди из URL на существование такого предложения */
+
+  const allPropertiesIds: number[] = offersData.map((element) => element.id);
+
+  if ( ! allPropertiesIds.includes(OfferId)) {
+    return <NotFound/>;
   }
 
   const data: OfferType = offersData[OfferId];
+
 
   return (
     <div className="page">
