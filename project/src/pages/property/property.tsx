@@ -25,23 +25,26 @@ function Property(): JSX.Element {
 
   const allPropertiesIds: number[] = offersData.map((element) => element.id);
 
-  if ( ! allPropertiesIds.includes(OfferId)) {
+  if (!allPropertiesIds.includes(OfferId)) {
     return <NotFound/>;
   }
 
   const data: OfferType = offersData[OfferId];
-
 
   return (
     <div className="page">
       <Header/>
       <main className="page__main page__main--property">
         <section className="property">
-          <div className="property__gallery-container container">
-            <div className="property__gallery">
-              {data.photo.slice(0, settings.MaxPhotoOnDetailedPage).map((element) => <div className="property__image-wrapper" key={crypto.randomUUID()}><img src={element} alt="Photo studio"/></div>)}
-            </div>
-          </div>
+          {
+            data.photo.length ?
+              <div className="property__gallery-container container">
+                <div className="property__gallery">
+                  {data.photo.slice(0, settings.MaxPhotoOnDetailedPage).map((element) => <div className="property__image-wrapper" key={crypto.randomUUID()}><img src={element} alt="Photo studio"/></div>)}
+                </div>
+              </div>
+              : ''
+          }
           <div className="property__container container">
             <div className="property__wrapper">
               {
@@ -83,17 +86,21 @@ function Property(): JSX.Element {
                 <b className="property__price-value">&euro;{data.priceNightEuro}</b>
                 <span className="property__price-text">&nbsp;night</span>
               </div>
-              <div className="property__inside">
-                <h2 className="property__inside-title">What&apos;s inside</h2>
-                <ul className="property__inside-list">
-                  {data.amenities.map((element) => <li className="property__inside-item" key={crypto.randomUUID()}>{element}</li>)}
-                </ul>
-              </div>
+              {
+                data.amenities.length ?
+                  <div className="property__inside">
+                    <h2 className="property__inside-title">What&apos;s inside</h2>
+                    <ul className="property__inside-list">
+                      {data.amenities.map((element) => <li className="property__inside-item" key={crypto.randomUUID()}>{element}</li>)}
+                    </ul>
+                  </div>
+                  : ''
+              }
               <div className="property__host">
                 <h2 className="property__host-title">Meet the host</h2>
                 <div className="property__host-user user">
                   <div className="property__avatar-wrapper property__avatar-wrapper--pro user__avatar-wrapper">
-                    <img className="property__avatar user__avatar" src={data.host.photo} width="74" height="74" alt="Host avatar"/>
+                    <img className="property__avatar user__avatar" src={data.host.photo ? data.host.photo : 'img/avatar.svg'} width="74" height="74" alt="Host avatar"/>
                   </div>
                   <span className="property__user-name">
                     {data.host.name}
@@ -106,12 +113,9 @@ function Property(): JSX.Element {
                   }
                 </div>
                 <div className="property__description wysiwyg">
-                  <p>
-                    {
-                      data.description.replaceAll('\n\n', '</p><p>')
-                        .replaceAll('\n', '<br>')
-                    }
-                  </p>
+                  {
+                    data.description ? data.description : 'No description provided'
+                  }
                 </div>
               </div>
               <section className="property__reviews reviews">
