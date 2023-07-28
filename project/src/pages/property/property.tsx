@@ -9,7 +9,16 @@ import {settings} from '../../settings';
 
 function Property(): JSX.Element {
 
-  const data: OfferType = offersData[useParams().offerId];
+  const potentialOfferId: string | undefined = useParams().offerId;
+  let OfferId;
+
+  if (potentialOfferId === undefined) {
+    return (<div>404</div>);
+  } else {
+    OfferId = Number(potentialOfferId);
+  }
+
+  const data: OfferType = offersData[OfferId];
 
   return (
     <div className="page">
