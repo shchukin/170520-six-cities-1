@@ -11,26 +11,17 @@ import PlaceCard from '../../components/place-card/place-card';
 
 function Property(): JSX.Element {
 
-  /* Проверяем полученный айди на undefined */
+  const OfferId: string | undefined = useParams().offerId;
 
-  const potentialOfferId: string | undefined = useParams().offerId;
-
-  if (potentialOfferId === undefined) {
+  if (OfferId === undefined) {
     return <NotFound/>;
   }
 
-  const OfferId = Number(potentialOfferId);
+  const data: OfferType | undefined = offersData.find((element) => element.id === OfferId);
 
-
-  /* Проверяем полученный айди из URL на существование такого предложения */
-
-  const allPropertiesIds: number[] = offersData.map((element) => element.id);
-
-  if (!allPropertiesIds.includes(OfferId)) {
+  if (data === undefined) {
     return <NotFound/>;
   }
-
-  const data: OfferType = offersData[OfferId];
 
   return (
     <div className="page">
@@ -204,7 +195,7 @@ function Property(): JSX.Element {
             </h2>
             <div className="near-places__list">
               {
-                offersData.slice(0, 3).map( (element, index) => <div className={'near-places__card'} key={element.id}><PlaceCard data={element}/></div>)
+                offersData.slice(0, 3).map((element, index) => <div className={'near-places__card'} key={element.id}><PlaceCard data={element}/></div>)
               }
             </div>
           </section>
