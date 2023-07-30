@@ -18,7 +18,7 @@ export const offersData: OfferType[] = [
       'id': 0,
       'avatarUrl': 'img/avatar-angelina.jpg',
       'name': 'Angelina',
-      'pro': true
+      'isPro': true
     }
   },
   {
@@ -38,7 +38,7 @@ export const offersData: OfferType[] = [
       'id': 1,
       'avatarUrl': 'img/avatar-angelina.jpg',
       'name': 'Valery',
-      'pro': true
+      'isPro': true
     }
   },
   {
@@ -58,7 +58,7 @@ export const offersData: OfferType[] = [
       'id': 2,
       'avatarUrl': 'img/avatar-angelina.jpg',
       'name': 'Valery',
-      'pro': true
+      'isPro': true
     }
   },
   {
@@ -78,7 +78,7 @@ export const offersData: OfferType[] = [
       'id': 3,
       'avatarUrl': 'img/avatar-angelina.jpg',
       'name': 'Dany',
-      'pro': false
+      'isPro': false
     }
   },
   {
@@ -98,7 +98,7 @@ export const offersData: OfferType[] = [
       'id': 4,
       'avatarUrl': 'img/avatar-angelina.jpg',
       'name': 'Elon',
-      'pro': false
+      'isPro': false
     }
   },
   {
@@ -118,7 +118,7 @@ export const offersData: OfferType[] = [
       'id': 5,
       'avatarUrl': 'img/avatar-angelina.jpg',
       'name': 'Martin',
-      'pro': false
+      'isPro': false
     }
   },
 ];

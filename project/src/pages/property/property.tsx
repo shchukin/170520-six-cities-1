@@ -96,7 +96,7 @@ function Property(): JSX.Element {
                     {currentOffer.host.name}
                   </span>
                   {
-                    currentOffer.host.pro &&
+                    currentOffer.host.isPro &&
                     <span className="property__user-status">
                       Pro
                     </span>
