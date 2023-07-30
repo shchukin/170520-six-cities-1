@@ -4,7 +4,7 @@ import {HousingKindType} from './housingKindType';
 export type OfferType = {
   id: number;
   title: string;
-  premium: boolean;
+  isPremium: boolean;
   ratingInStars: number;
   priceNightEuro: number;
   kind: HousingKindType;

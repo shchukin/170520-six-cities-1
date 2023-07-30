@@ -12,7 +12,7 @@ function PlaceCard(props: PlaceCardProps): JSX.Element {
   return (
     <article className="place-card">
       {
-        props.data.premium &&
+        props.data.isPremium &&
         <div className="place-card__mark">
           <span>Premium</span>
         </div>

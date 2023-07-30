@@ -4,7 +4,7 @@ export const offersData: OfferType[] = [
   {
     'id': 1,
     'title': 'Beautiful & luxurious apartment at great location',
-    'premium': true,
+    'isPremium': true,
     'ratingInStars': 4.5,
     'priceNightEuro': 130,
     'kind': 'apartment',
@@ -24,7 +24,7 @@ export const offersData: OfferType[] = [
   {
     'id': 2,
     'title': 'Wood and stone place',
-    'premium': false,
+    'isPremium': false,
     'ratingInStars': 4,
     'priceNightEuro': 80,
     'kind': 'room',
@@ -44,7 +44,7 @@ export const offersData: OfferType[] = [
   {
     'id': 3,
     'title': 'Canal View Prinsengracht',
-    'premium': false,
+    'isPremium': false,
     'ratingInStars': 4.2,
     'priceNightEuro': 132,
     'kind': 'apartment',
@@ -64,7 +64,7 @@ export const offersData: OfferType[] = [
   {
     'id': 4,
     'title': 'Nice, cozy, warm big bed apartment',
-    'premium': true,
+    'isPremium': true,
     'ratingInStars': 5,
     'priceNightEuro': 180,
     'kind': 'apartment',
@@ -84,7 +84,7 @@ export const offersData: OfferType[] = [
   {
     'id': 5,
     'title': 'Artistic Loft Studio',
-    'premium': false,
+    'isPremium': false,
     'ratingInStars': 3.5,
     'priceNightEuro': 80,
     'kind': 'hotel',
@@ -104,7 +104,7 @@ export const offersData: OfferType[] = [
   {
     'id': 6,
     'title': 'Yet Another loft studio',
-    'premium': true,
+    'isPremium': true,
     'ratingInStars': 1,
     'priceNightEuro': 30,
     'kind': 'hotel',

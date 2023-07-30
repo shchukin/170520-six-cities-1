@@ -39,7 +39,7 @@ function Property(): JSX.Element {
           <div className="property__container container">
             <div className="property__wrapper">
               {
-                currentOffer.premium &&
+                currentOffer.isPremium &&
                 <div className="property__mark">
                   <span>Premium</span>
                 </div>
