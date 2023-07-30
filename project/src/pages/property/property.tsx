@@ -29,10 +29,10 @@ function Property(): JSX.Element {
       <main className="page__main page__main--property">
         <section className="property">
           {
-            currentOffer.photo.length !== 0 &&
+            currentOffer.images.length !== 0 &&
               <div className="property__gallery-container container">
                 <div className="property__gallery">
-                  {currentOffer.photo.slice(0, settings.MaxPhotoOnDetailedPage).map((element) => <div className="property__image-wrapper" key={crypto.randomUUID()}><img src={element} alt="Photo studio"/></div>)}
+                  {currentOffer.images.slice(0, settings.MaxPhotoOnDetailedPage).map((element) => <div className="property__image-wrapper" key={crypto.randomUUID()}><img src={element} alt="Photo studio"/></div>)}
                 </div>
               </div>
           }
