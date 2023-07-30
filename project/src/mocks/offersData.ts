@@ -16,7 +16,7 @@ export const offersData: OfferType[] = [
     'featuredPhoto': 0,
     'goods': ['Wi-Fi', 'Washing machine', 'Towels', 'Heating', 'Coffee machine', 'Baby seat', 'Kitchen', 'Dishwasher', 'Cabel TV', 'Fridge'],
     'host': {
-      'id': 0,
+      'id': 1,
       'avatarUrl': 'img/avatar-angelina.jpg',
       'name': 'Angelina',
       'isPro': true
@@ -37,7 +37,7 @@ export const offersData: OfferType[] = [
     'featuredPhoto': 1,
     'goods': ['Wi-Fi', 'Washing machine', 'Towels', 'Heating', 'Coffee machine', 'Baby seat', 'Kitchen', 'Dishwasher', 'Cabel TV', 'Fridge'],
     'host': {
-      'id': 1,
+      'id': 2,
       'avatarUrl': 'img/avatar-angelina.jpg',
       'name': 'Valery',
       'isPro': true
@@ -47,7 +47,7 @@ export const offersData: OfferType[] = [
     'id': 3,
     'title': 'Canal View Prinsengracht',
     'isPremium': false,
-    'isFavorite': false,
+    'isFavorite': true,
     'ratingInStars': 4.2,
     'priceNightEuro': 132,
     'kind': 'apartment',
@@ -58,7 +58,7 @@ export const offersData: OfferType[] = [
     'featuredPhoto': 1,
     'goods': ['Wi-Fi', 'Washing machine', 'Towels', 'Heating', 'Coffee machine', 'Baby seat', 'Kitchen', 'Dishwasher', 'Cabel TV', 'Fridge'],
     'host': {
-      'id': 2,
+      'id': 3,
       'avatarUrl': 'img/avatar-angelina.jpg',
       'name': 'Valery',
       'isPro': true
@@ -79,7 +79,7 @@ export const offersData: OfferType[] = [
     'featuredPhoto': 2,
     'goods': ['Wi-Fi', 'Washing machine', 'Towels', 'Heating', 'Coffee machine', 'Baby seat', 'Kitchen', 'Dishwasher', 'Cabel TV', 'Fridge'],
     'host': {
-      'id': 3,
+      'id': 4,
       'avatarUrl': 'img/avatar-angelina.jpg',
       'name': 'Dany',
       'isPro': false
@@ -100,7 +100,7 @@ export const offersData: OfferType[] = [
     'featuredPhoto': 0,
     'goods': ['Wi-Fi', 'Washing machine', 'Towels', 'Heating', 'Coffee machine', 'Baby seat', 'Kitchen', 'Dishwasher', 'Cabel TV', 'Fridge'],
     'host': {
-      'id': 4,
+      'id': 5,
       'avatarUrl': 'img/avatar-angelina.jpg',
       'name': 'Elon',
       'isPro': false
@@ -121,7 +121,7 @@ export const offersData: OfferType[] = [
     'featuredPhoto': 0,
     'goods': ['Wi-Fi'],
     'host': {
-      'id': 5,
+      'id': 6,
       'avatarUrl': 'img/avatar-angelina.jpg',
       'name': 'Martin',
       'isPro': false
