@@ -7,7 +7,7 @@ export type OfferType = {
   isPremium: boolean;
   isFavorite: boolean;
   rating: number;
-  priceNightEuro: number;
+  price: number;
   kind: HousingKindType;
   bedrooms: number;
   maxAdults: number;
