@@ -11,13 +11,13 @@ import PlaceCard from '../../components/place-card/place-card';
 
 function Property(): JSX.Element {
 
-  const OfferId: string | undefined = useParams().offerId;
+  const offerId: string | undefined = useParams().offerId;
 
-  if (OfferId === undefined) {
+  if (offerId === undefined) {
     return <NotFound/>;
   }
 
-  const currentOffer: OfferType | undefined = offersData.find((element) => element.id === OfferId);
+  const currentOffer: OfferType | undefined = offersData.find((element) => element.id === offerId);
 
   if (currentOffer === undefined) {
     return <NotFound/>;
@@ -193,7 +193,7 @@ function Property(): JSX.Element {
             </h2>
             <div className="near-places__list">
               {
-                offersData.filter((element) => element.id !== OfferId).slice(0, 3).map((element) => <div className={'near-places__card'} key={element.id}><PlaceCard data={element}/></div>)
+                offersData.filter((element) => element.id !== offerId).slice(0, 3).map((element) => <div className={'near-places__card'} key={element.id}><PlaceCard data={element}/></div>)
               }
             </div>
           </section>
