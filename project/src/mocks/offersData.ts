@@ -15,6 +15,7 @@ export const offersData: OfferType[] = [
     'featuredPhoto': 0,
     'goods': ['Wi-Fi', 'Washing machine', 'Towels', 'Heating', 'Coffee machine', 'Baby seat', 'Kitchen', 'Dishwasher', 'Cabel TV', 'Fridge'],
     'host': {
+      'id': 0,
       'avatarUrl': 'img/avatar-angelina.jpg',
       'name': 'Angelina',
       'pro': true
@@ -34,6 +35,7 @@ export const offersData: OfferType[] = [
     'featuredPhoto': 1,
     'goods': ['Wi-Fi', 'Washing machine', 'Towels', 'Heating', 'Coffee machine', 'Baby seat', 'Kitchen', 'Dishwasher', 'Cabel TV', 'Fridge'],
     'host': {
+      'id': 1,
       'avatarUrl': 'img/avatar-angelina.jpg',
       'name': 'Valery',
       'pro': true
@@ -53,6 +55,7 @@ export const offersData: OfferType[] = [
     'featuredPhoto': 1,
     'goods': ['Wi-Fi', 'Washing machine', 'Towels', 'Heating', 'Coffee machine', 'Baby seat', 'Kitchen', 'Dishwasher', 'Cabel TV', 'Fridge'],
     'host': {
+      'id': 2,
       'avatarUrl': 'img/avatar-angelina.jpg',
       'name': 'Valery',
       'pro': true
@@ -72,6 +75,7 @@ export const offersData: OfferType[] = [
     'featuredPhoto': 2,
     'goods': ['Wi-Fi', 'Washing machine', 'Towels', 'Heating', 'Coffee machine', 'Baby seat', 'Kitchen', 'Dishwasher', 'Cabel TV', 'Fridge'],
     'host': {
+      'id': 3,
       'avatarUrl': 'img/avatar-angelina.jpg',
       'name': 'Dany',
       'pro': false
@@ -91,6 +95,7 @@ export const offersData: OfferType[] = [
     'featuredPhoto': 0,
     'goods': ['Wi-Fi', 'Washing machine', 'Towels', 'Heating', 'Coffee machine', 'Baby seat', 'Kitchen', 'Dishwasher', 'Cabel TV', 'Fridge'],
     'host': {
+      'id': 4,
       'avatarUrl': 'img/avatar-angelina.jpg',
       'name': 'Elon',
       'pro': false
@@ -110,6 +115,7 @@ export const offersData: OfferType[] = [
     'featuredPhoto': 0,
     'goods': ['Wi-Fi'],
     'host': {
+      'id': 5,
       'avatarUrl': 'img/avatar-angelina.jpg',
       'name': 'Martin',
       'pro': false
