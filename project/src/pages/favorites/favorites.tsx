@@ -25,7 +25,7 @@ function Favorites(): JSX.Element {
                 </div>
                 <div className="favorites__places">
                   {
-                    favoriteOffers.map((element) => <div className="favorites__card"><PlaceCard horizontal data={element}></PlaceCard></div>)
+                    favoriteOffers.map((element) => <div className="favorites__card"><PlaceCard horizontal data={element} /></div>)
                   }
                 </div>
               </li>
