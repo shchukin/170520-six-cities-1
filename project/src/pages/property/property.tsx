@@ -78,14 +78,13 @@ function Property(): JSX.Element {
                 <span className="property__price-text">&nbsp;night</span>
               </div>
               {
-                data.amenities.length ?
+                data.amenities.length !== 0 &&
                   <div className="property__inside">
                     <h2 className="property__inside-title">What&apos;s inside</h2>
                     <ul className="property__inside-list">
                       {data.amenities.map((element) => <li className="property__inside-item" key={crypto.randomUUID()}>{element}</li>)}
                     </ul>
                   </div>
-                  : ''
               }
               <div className="property__host">
                 <h2 className="property__host-title">Meet the host</h2>
