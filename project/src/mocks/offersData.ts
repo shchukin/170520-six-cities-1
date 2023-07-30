@@ -15,7 +15,7 @@ export const offersData: OfferType[] = [
     'featuredPhoto': 0,
     'goods': ['Wi-Fi', 'Washing machine', 'Towels', 'Heating', 'Coffee machine', 'Baby seat', 'Kitchen', 'Dishwasher', 'Cabel TV', 'Fridge'],
     'host': {
-      'photo': 'img/avatar-angelina.jpg',
+      'avatarUrl': 'img/avatar-angelina.jpg',
       'name': 'Angelina',
       'pro': true
     }
@@ -34,7 +34,7 @@ export const offersData: OfferType[] = [
     'featuredPhoto': 1,
     'goods': ['Wi-Fi', 'Washing machine', 'Towels', 'Heating', 'Coffee machine', 'Baby seat', 'Kitchen', 'Dishwasher', 'Cabel TV', 'Fridge'],
     'host': {
-      'photo': 'img/avatar-angelina.jpg',
+      'avatarUrl': 'img/avatar-angelina.jpg',
       'name': 'Valery',
       'pro': true
     }
@@ -53,7 +53,7 @@ export const offersData: OfferType[] = [
     'featuredPhoto': 1,
     'goods': ['Wi-Fi', 'Washing machine', 'Towels', 'Heating', 'Coffee machine', 'Baby seat', 'Kitchen', 'Dishwasher', 'Cabel TV', 'Fridge'],
     'host': {
-      'photo': 'img/avatar-angelina.jpg',
+      'avatarUrl': 'img/avatar-angelina.jpg',
       'name': 'Valery',
       'pro': true
     }
@@ -72,7 +72,7 @@ export const offersData: OfferType[] = [
     'featuredPhoto': 2,
     'goods': ['Wi-Fi', 'Washing machine', 'Towels', 'Heating', 'Coffee machine', 'Baby seat', 'Kitchen', 'Dishwasher', 'Cabel TV', 'Fridge'],
     'host': {
-      'photo': 'img/avatar-angelina.jpg',
+      'avatarUrl': 'img/avatar-angelina.jpg',
       'name': 'Dany',
       'pro': false
     }
@@ -91,7 +91,7 @@ export const offersData: OfferType[] = [
     'featuredPhoto': 0,
     'goods': ['Wi-Fi', 'Washing machine', 'Towels', 'Heating', 'Coffee machine', 'Baby seat', 'Kitchen', 'Dishwasher', 'Cabel TV', 'Fridge'],
     'host': {
-      'photo': 'img/avatar-angelina.jpg',
+      'avatarUrl': 'img/avatar-angelina.jpg',
       'name': 'Elon',
       'pro': false
     }
@@ -110,7 +110,7 @@ export const offersData: OfferType[] = [
     'featuredPhoto': 0,
     'goods': ['Wi-Fi'],
     'host': {
-      'photo': 'img/avatar-angelina.jpg',
+      'avatarUrl': 'img/avatar-angelina.jpg',
       'name': 'Martin',
       'pro': false
     }

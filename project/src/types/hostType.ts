@@ -1,5 +1,5 @@
 export type HostType = {
-  photo: string;
+  avatarUrl: string;
   name: string;
   pro: boolean;
 }
