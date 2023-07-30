@@ -5,6 +5,7 @@ export type OfferType = {
   id: number;
   title: string;
   isPremium: boolean;
+  isFavorite: boolean;
   ratingInStars: number;
   priceNightEuro: number;
   kind: HousingKindType;
