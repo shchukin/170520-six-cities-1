@@ -39,7 +39,7 @@ function PlaceCard(props: PlaceCardProps): JSX.Element {
         </div>
         <div className="place-card__rating rating">
           <div className="place-card__stars rating__stars">
-            <span style={{width: starsToPct(props.data.ratingInStars) }}></span>
+            <span style={{width: starsToPct(props.data.rating) }}></span>
             <span className="visually-hidden">Rating</span>
           </div>
         </div>
