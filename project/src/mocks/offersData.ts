@@ -2,7 +2,7 @@ import {OfferType} from '../types/offerType';
 
 export const offersData: OfferType[] = [
   {
-    'id': 'beautiful-and-luxurious-apartment-at-great-location',
+    'id': 1,
     'title': 'Beautiful & luxurious apartment at great location',
     'premium': true,
     'ratingInStars': 4.5,
@@ -21,7 +21,7 @@ export const offersData: OfferType[] = [
     }
   },
   {
-    'id': 'wood-and-stone-place',
+    'id': 2,
     'title': 'Wood and stone place',
     'premium': false,
     'ratingInStars': 4,
@@ -40,7 +40,7 @@ export const offersData: OfferType[] = [
     }
   },
   {
-    'id': 'canal-view-prinsengracht',
+    'id': 3,
     'title': 'Canal View Prinsengracht',
     'premium': false,
     'ratingInStars': 4.2,
@@ -59,7 +59,7 @@ export const offersData: OfferType[] = [
     }
   },
   {
-    'id': 'nice-cozy-warm-big-bed-apartment',
+    'id': 4,
     'title': 'Nice, cozy, warm big bed apartment',
     'premium': true,
     'ratingInStars': 5,
@@ -78,7 +78,7 @@ export const offersData: OfferType[] = [
     }
   },
   {
-    'id': 'artistic-loft-studio',
+    'id': 5,
     'title': 'Artistic Loft Studio',
     'premium': false,
     'ratingInStars': 3.5,
@@ -97,7 +97,7 @@ export const offersData: OfferType[] = [
     }
   },
   {
-    'id': 'yet-anoter-loft-studio',
+    'id': 6,
     'title': 'Yet Anoter loft studio',
     'premium': true,
     'ratingInStars': 1,

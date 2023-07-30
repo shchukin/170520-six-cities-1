@@ -2,7 +2,7 @@ import {HostType} from '../types/hostType';
 import {HousingKindType} from './housingKindType';
 
 export type OfferType = {
-  id: string;
+  id: number;
   title: string;
   premium: boolean;
   ratingInStars: number;

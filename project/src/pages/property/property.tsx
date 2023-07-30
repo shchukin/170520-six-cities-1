@@ -11,11 +11,13 @@ import PlaceCard from '../../components/place-card/place-card';
 
 function Property(): JSX.Element {
 
-  const offerId: string | undefined = useParams().offerId;
+  const potentialOfferId: string | undefined = useParams().offerId;
 
-  if (offerId === undefined) {
+  if (potentialOfferId === undefined) {
     return <NotFound/>;
   }
+
+  const offerId = Number(potentialOfferId);
 
   const currentOffer: OfferType | undefined = offersData.find((element) => element.id === offerId);
 
