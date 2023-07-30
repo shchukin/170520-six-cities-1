@@ -64,7 +64,7 @@ function Property(): JSX.Element {
               </div>
               <ul className="property__features">
                 <li className="property__feature property__feature--entire">
-                  {HOUSING_KINDS[currentOffer.kind]}
+                  {HOUSING_KINDS[currentOffer.type]}
                 </li>
                 <li className="property__feature property__feature--bedrooms">
                   {pluralize(currentOffer.bedrooms, 'Bedroom', 's')}

@@ -46,7 +46,7 @@ function PlaceCard(props: PlaceCardProps): JSX.Element {
         <h2 className="place-card__name">
           <Link to={'offer/' + props.data.id}>{props.data.title}</Link>
         </h2>
-        <p className="place-card__type">{HOUSING_KINDS[props.data.kind]}</p>
+        <p className="place-card__type">{HOUSING_KINDS[props.data.type]}</p>
       </div>
     </article>
   );
