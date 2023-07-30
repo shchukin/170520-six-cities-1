@@ -9,8 +9,6 @@ type PlaceCardProps = {
 
 function PlaceCard(props: PlaceCardProps): JSX.Element {
 
-  console.log(props.data.isFavorite)
-
   return (
     <article className="place-card">
       {
@@ -20,7 +18,7 @@ function PlaceCard(props: PlaceCardProps): JSX.Element {
         </div>
       }
       <div className="place-card__image-wrapper">
-        <Link to={AppRoute.Offer + '/' + props.data.id}>
+        <Link to={`${AppRoute.Offer}/${props.data.id}`}>
           <img className="place-card__image" src={props.data.previewImage} width="260" height="200" alt="Place image"/>
         </Link>
       </div>
@@ -44,7 +42,7 @@ function PlaceCard(props: PlaceCardProps): JSX.Element {
           </div>
         </div>
         <h2 className="place-card__name">
-          <Link to={'offer/' + props.data.id}>{props.data.title}</Link>
+          <Link to={`offer/${props.data.id}`}>{props.data.title}</Link>
         </h2>
         <p className="place-card__type">{HOUSING_KINDS[props.data.type]}</p>
       </div>
