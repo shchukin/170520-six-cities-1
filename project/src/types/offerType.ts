@@ -13,7 +13,7 @@ export type OfferType = {
   maxAdults: number;
   description: string;
   images: string[];
-  featuredPhoto: number;
+  previewImage: string;
   goods: string[];
   host: HostType;
 }
