@@ -193,7 +193,7 @@ function Property(): JSX.Element {
             </h2>
             <div className="near-places__list">
               {
-                offersData.slice(0, 3).map((element) => <div className={'near-places__card'} key={element.id}><PlaceCard data={element}/></div>)
+                offersData.filter((elemenet) => elemenet.id !== OfferId).slice(0, 3).map((element) => <div className={'near-places__card'} key={element.id}><PlaceCard data={element}/></div>)
               }
             </div>
           </section>
