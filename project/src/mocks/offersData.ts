@@ -98,7 +98,7 @@ export const offersData: OfferType[] = [
   },
   {
     'id': 6,
-    'title': 'Yet Anoter loft studio',
+    'title': 'Yet Another loft studio',
     'premium': true,
     'ratingInStars': 1,
     'priceNightEuro': 30,
