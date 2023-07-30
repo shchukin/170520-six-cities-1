@@ -13,6 +13,6 @@ export type OfferType = {
   description: string;
   photo: string[];
   featuredPhoto: number;
-  amenities: string[];
+  goods: string[];
   host: HostType;
 }
