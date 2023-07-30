@@ -4,13 +4,14 @@ import {starsToPct} from '../../utils';
 import {AppRoute, HOUSING_KINDS} from '../../const';
 
 type PlaceCardProps = {
+  horizontal?: boolean
   data: OfferType;
 }
 
 function PlaceCard(props: PlaceCardProps): JSX.Element {
 
   return (
-    <article className="place-card">
+    <article className={`place-card${ props.horizontal ? ' place-card--horizontal': ''}`}>
       {
         props.data.isPremium &&
         <div className="place-card__mark">
@@ -19,14 +20,14 @@ function PlaceCard(props: PlaceCardProps): JSX.Element {
       }
       <div className="place-card__image-wrapper">
         <Link to={`${AppRoute.Offer}/${props.data.id}`}>
-          <img className="place-card__image" src={props.data.previewImage} width="260" height="200" alt="Place image"/>
+          <img className="place-card__image" src={props.data.previewImage} width={`${props.horizontal ? '150' : '260' }`} height={`${props.horizontal ? '110' : '200'}`} alt="Place image"/>
         </Link>
       </div>
       <div className="place-card__info">
         <div className="place-card__price-wrapper">
           <div className="place-card__price">
             <b className="place-card__price-value">&euro;{props.data.price}</b>
-            <span className="place-card__price-text">&#47;&nbsp;night</span>
+            <span className="place-card__price-text">&nbsp;&#47;&nbsp;night</span>
           </div>
           <button className={`place-card__bookmark-button${ props.data.isFavorite ? ' place-card__bookmark-button--active' : ''} button`} type="button">
             <svg className="place-card__bookmark-icon" width="18" height="19">
