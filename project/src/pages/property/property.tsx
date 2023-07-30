@@ -17,9 +17,9 @@ function Property(): JSX.Element {
     return <NotFound/>;
   }
 
-  const data: OfferType | undefined = offersData.find((element) => element.id === OfferId);
+  const currentOffer: OfferType | undefined = offersData.find((element) => element.id === OfferId);
 
-  if (data === undefined) {
+  if (currentOffer === undefined) {
     return <NotFound/>;
   }
 
@@ -29,24 +29,24 @@ function Property(): JSX.Element {
       <main className="page__main page__main--property">
         <section className="property">
           {
-            data.photo.length !== 0 &&
+            currentOffer.photo.length !== 0 &&
               <div className="property__gallery-container container">
                 <div className="property__gallery">
-                  {data.photo.slice(0, settings.MaxPhotoOnDetailedPage).map((element) => <div className="property__image-wrapper" key={crypto.randomUUID()}><img src={element} alt="Photo studio"/></div>)}
+                  {currentOffer.photo.slice(0, settings.MaxPhotoOnDetailedPage).map((element) => <div className="property__image-wrapper" key={crypto.randomUUID()}><img src={element} alt="Photo studio"/></div>)}
                 </div>
               </div>
           }
           <div className="property__container container">
             <div className="property__wrapper">
               {
-                data.premium &&
+                currentOffer.premium &&
                 <div className="property__mark">
                   <span>Premium</span>
                 </div>
               }
               <div className="property__name-wrapper">
                 <h1 className="property__name">
-                  {data.title}
+                  {currentOffer.title}
                 </h1>
                 <button className="property__bookmark-button button" type="button">
                   <svg className="property__bookmark-icon" width="31" height="33">
@@ -57,32 +57,32 @@ function Property(): JSX.Element {
               </div>
               <div className="property__rating rating">
                 <div className="property__stars rating__stars">
-                  <span style={{width: starsToPct(data.ratingInStars)}}></span>
+                  <span style={{width: starsToPct(currentOffer.ratingInStars)}}></span>
                   <span className="visually-hidden">Rating</span>
                 </div>
-                <span className="property__rating-value rating__value">{data.ratingInStars}</span>
+                <span className="property__rating-value rating__value">{currentOffer.ratingInStars}</span>
               </div>
               <ul className="property__features">
                 <li className="property__feature property__feature--entire">
-                  {HOUSING_KINDS[data.kind]}
+                  {HOUSING_KINDS[currentOffer.kind]}
                 </li>
                 <li className="property__feature property__feature--bedrooms">
-                  {pluralize(data.bedrooms, 'Bedroom', 's')}
+                  {pluralize(currentOffer.bedrooms, 'Bedroom', 's')}
                 </li>
                 <li className="property__feature property__feature--adults">
-                  Max {pluralize(data.maxAdults, 'adult', 's')}
+                  Max {pluralize(currentOffer.maxAdults, 'adult', 's')}
                 </li>
               </ul>
               <div className="property__price">
-                <b className="property__price-value">&euro;{data.priceNightEuro}</b>
+                <b className="property__price-value">&euro;{currentOffer.priceNightEuro}</b>
                 <span className="property__price-text">&nbsp;night</span>
               </div>
               {
-                data.amenities.length !== 0 &&
+                currentOffer.amenities.length !== 0 &&
                   <div className="property__inside">
                     <h2 className="property__inside-title">What&apos;s inside</h2>
                     <ul className="property__inside-list">
-                      {data.amenities.map((element) => <li className="property__inside-item" key={crypto.randomUUID()}>{element}</li>)}
+                      {currentOffer.amenities.map((element) => <li className="property__inside-item" key={crypto.randomUUID()}>{element}</li>)}
                     </ul>
                   </div>
               }
@@ -90,13 +90,13 @@ function Property(): JSX.Element {
                 <h2 className="property__host-title">Meet the host</h2>
                 <div className="property__host-user user">
                   <div className="property__avatar-wrapper property__avatar-wrapper--pro user__avatar-wrapper">
-                    <img className="property__avatar user__avatar" src={data.host.photo ? data.host.photo : 'img/avatar.svg'} width="74" height="74" alt="Host avatar"/>
+                    <img className="property__avatar user__avatar" src={currentOffer.host.photo ? currentOffer.host.photo : 'img/avatar.svg'} width="74" height="74" alt="Host avatar"/>
                   </div>
                   <span className="property__user-name">
-                    {data.host.name}
+                    {currentOffer.host.name}
                   </span>
                   {
-                    data.host.pro &&
+                    currentOffer.host.pro &&
                     <span className="property__user-status">
                       Pro
                     </span>
@@ -104,7 +104,7 @@ function Property(): JSX.Element {
                 </div>
                 <div className="property__description wysiwyg">
                   {
-                    data.description ? data.description : 'No description provided'
+                    currentOffer.description ? currentOffer.description : 'No description provided'
                   }
                 </div>
               </div>
@@ -193,7 +193,7 @@ function Property(): JSX.Element {
             </h2>
             <div className="near-places__list">
               {
-                offersData.slice(0, 3).map((element, index) => <div className={'near-places__card'} key={element.id}><PlaceCard data={element}/></div>)
+                offersData.slice(0, 3).map((element) => <div className={'near-places__card'} key={element.id}><PlaceCard data={element}/></div>)
               }
             </div>
           </section>
