@@ -20,6 +20,19 @@ export const offersData: OfferType[] = [
       'avatarUrl': 'img/avatar-angelina.jpg',
       'name': 'Angelina',
       'isPro': true
+    },
+    'location': {
+      'latitude': 52.370216,
+      'longitude': 4.895168,
+      'zoom': 10
+    },
+    'city': {
+      'location': {
+        'latitude': 52.370216,
+        'longitude': 4.895168,
+        'zoom': 10
+      },
+      'name': 'Amsterdam'
     }
   },
   {
@@ -41,6 +54,19 @@ export const offersData: OfferType[] = [
       'avatarUrl': 'img/avatar-angelina.jpg',
       'name': 'Valery',
       'isPro': true
+    },
+    'location': {
+      'latitude': 52.370216,
+      'longitude': 4.895168,
+      'zoom': 10
+    },
+    'city': {
+      'location': {
+        'latitude': 52.370216,
+        'longitude': 4.895168,
+        'zoom': 10
+      },
+      'name': 'Cologne'
     }
   },
   {
@@ -62,6 +88,19 @@ export const offersData: OfferType[] = [
       'avatarUrl': 'img/avatar-angelina.jpg',
       'name': 'Valery',
       'isPro': true
+    },
+    'location': {
+      'latitude': 52.370216,
+      'longitude': 4.895168,
+      'zoom': 10
+    },
+    'city': {
+      'location': {
+        'latitude': 52.370216,
+        'longitude': 4.895168,
+        'zoom': 10
+      },
+      'name': 'Amsterdam'
     }
   },
   {
@@ -83,13 +122,26 @@ export const offersData: OfferType[] = [
       'avatarUrl': 'img/avatar-angelina.jpg',
       'name': 'Dany',
       'isPro': false
+    },
+    'location': {
+      'latitude': 52.370216,
+      'longitude': 4.895168,
+      'zoom': 10
+    },
+    'city': {
+      'location': {
+        'latitude': 52.370216,
+        'longitude': 4.895168,
+        'zoom': 10
+      },
+      'name': 'Cologne'
     }
   },
   {
     'id': 5,
     'title': 'Artistic Loft Studio',
     'isPremium': false,
-    'isFavorite': false,
+    'isFavorite': true,
     'rating': 3.5,
     'price': 80,
     'type': 'hotel',
@@ -104,13 +156,26 @@ export const offersData: OfferType[] = [
       'avatarUrl': 'img/avatar-angelina.jpg',
       'name': 'Elon',
       'isPro': false
+    },
+    'location': {
+      'latitude': 52.370216,
+      'longitude': 4.895168,
+      'zoom': 10
+    },
+    'city': {
+      'location': {
+        'latitude': 52.370216,
+        'longitude': 4.895168,
+        'zoom': 10
+      },
+      'name': 'Amsterdam'
     }
   },
   {
     'id': 6,
     'title': 'Yet Another loft studio',
     'isPremium': true,
-    'isFavorite': false,
+    'isFavorite': true,
     'rating': 1,
     'price': 30,
     'type': 'hotel',
@@ -125,6 +190,19 @@ export const offersData: OfferType[] = [
       'avatarUrl': 'img/avatar-angelina.jpg',
       'name': 'Martin',
       'isPro': false
+    },
+    'location': {
+      'latitude': 52.370216,
+      'longitude': 4.895168,
+      'zoom': 10
+    },
+    'city': {
+      'location': {
+        'latitude': 52.370216,
+        'longitude': 4.895168,
+        'zoom': 10
+      },
+      'name': 'Cologne'
     }
   },
 ];

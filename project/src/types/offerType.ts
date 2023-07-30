@@ -1,5 +1,7 @@
 import {HostType} from '../types/hostType';
 import {HousingKindType} from './housingKindType';
+import {CityType} from './cityType';
+import {LocationType} from './locationType';
 
 export type OfferType = {
   id: number;
@@ -16,4 +18,6 @@ export type OfferType = {
   previewImage: string;
   goods: string[];
   host: HostType;
+  location: LocationType;
+  city: CityType;
 }
