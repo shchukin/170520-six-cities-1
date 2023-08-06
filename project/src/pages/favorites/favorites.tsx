@@ -7,6 +7,19 @@ function Favorites(): JSX.Element {
 
   const favoriteOffers = offersData.filter((element) => element.isFavorite);
 
+  const groupByCity = (array) => {
+    return array.reduce((acc, item) => {
+      const key = item.city.name;
+      if (!acc[key]) {
+        acc[key] = [];
+      }
+      acc[key].push(item);
+      return acc;
+    }, {});
+  };
+
+  const newData = groupByCity(favoriteOffers);
+
   return (
     <div className="page">
       <Header/>
@@ -15,34 +28,22 @@ function Favorites(): JSX.Element {
           <section className="favorites">
             <h1 className="favorites__title">Saved listing</h1>
             <ul className="favorites__list">
-              <li className="favorites__locations-items">
-                <div className="favorites__locations locations locations--current">
-                  <div className="locations__item">
-                    <a className="locations__item-link" href="#">
-                      <span>Amsterdam</span>
-                    </a>
+              {Object.keys(newData).map(cityName => (
+                <li className="favorites__locations-items" key={cityName}>
+                  <div className="favorites__locations locations locations--current">
+                    <div className="locations__item">
+                      <a className="locations__item-link" href="#">
+                        <span>{cityName}</span>
+                      </a>
+                    </div>
                   </div>
-                </div>
-                <div className="favorites__places">
-                  {
-                    favoriteOffers.map((element) => <div className="favorites__card"><PlaceCard horizontal data={element} /></div>)
-                  }
-                </div>
-              </li>
-              <li className="favorites__locations-items">
-                <div className="favorites__locations locations locations--current">
-                  <div className="locations__item">
-                    <a className="locations__item-link" href="#">
-                      <span>Cologne</span>
-                    </a>
+                  <div className="favorites__places">
+                    {newData[cityName].map((item, index) => (
+                      <div className="favorites__card" key={index}><PlaceCard horizontal data={item}/></div>
+                    ))}
                   </div>
-                </div>
-                <div className="favorites__places">
-                  {
-                    favoriteOffers.map((element) => <div className="favorites__card"><PlaceCard horizontal data={element}/></div>)
-                  }
-                </div>
-              </li>
+                </li>
+              ))}
             </ul>
           </section>
         </div>
