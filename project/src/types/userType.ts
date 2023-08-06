@@ -1,4 +1,4 @@
-export type HostType = {
+export type UserType = {
   id: number;
   avatarUrl: string;
   name: string;

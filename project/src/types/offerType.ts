@@ -1,4 +1,4 @@
-import {HostType} from '../types/hostType';
+import {UserType} from './userType';
 import {HousingKindType} from './housingKindType';
 import {CityType} from './cityType';
 import {LocationType} from './locationType';
@@ -17,7 +17,7 @@ export type OfferType = {
   images: string[];
   previewImage: string;
   goods: string[];
-  host: HostType;
+  host: UserType;
   location: LocationType;
   city: CityType;
 }
