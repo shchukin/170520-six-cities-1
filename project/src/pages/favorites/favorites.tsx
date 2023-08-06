@@ -2,12 +2,13 @@ import Header from '../../components/header/header';
 import Footer from '../../components/footer/footer';
 import {offersData} from '../../mocks/offersData';
 import PlaceCard from '../../components/place-card/place-card';
+import {OfferType} from '../../types/offerType';
 
 function Favorites(): JSX.Element {
 
   const favoriteOffers = offersData.filter((element) => element.isFavorite);
 
-  const groupByCity = (array) => {
+  const groupByCity = (array:OfferType[]) => {
     return array.reduce((acc, item) => {
       const key = item.city.name;
       if (!acc[key]) {
@@ -15,7 +16,7 @@ function Favorites(): JSX.Element {
       }
       acc[key].push(item);
       return acc;
-    }, {});
+    }, {} as Record<string, OfferType[]>);
   };
 
   const newData = groupByCity(favoriteOffers);
