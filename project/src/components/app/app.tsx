@@ -1,9 +1,9 @@
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import {AppRoute, AuthorizationStatus} from '../../const';
 
-import Main from './../../pages/main/main';
-import Login from './../../pages/login/login';
-import Favorites from './../../pages/favorites/favorites';
+import Main from '../../pages/main/main';
+import Login from '../../pages/login/login';
+import Favorites from '../../pages/favorites/favorites';
 import Property from '../../pages/property/property';
 import NotFound from '../../pages/not-found/not-found';
 import PrivateRoute from '../private-route/private-route';
