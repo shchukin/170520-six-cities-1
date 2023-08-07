@@ -4,14 +4,14 @@ import {starsToPct} from '../../utils';
 import {AppRoute, HOUSING_KINDS} from '../../const';
 
 type PlaceCardProps = {
-  horizontal?: boolean
+  horizontal?: boolean;
   data: OfferType;
 }
 
 function PlaceCard(props: PlaceCardProps): JSX.Element {
 
   return (
-    <article className={`place-card${ props.horizontal ? ' place-card--horizontal': ''}`}>
+    <article className={`place-card${ props.horizontal ? ' place-card--horizontal' : ''}`}>
       {
         props.data.isPremium &&
         <div className="place-card__mark">
@@ -20,7 +20,7 @@ function PlaceCard(props: PlaceCardProps): JSX.Element {
       }
       <div className="place-card__image-wrapper">
         <Link to={`${AppRoute.Offer}/${props.data.id}`}>
-          <img className="place-card__image" src={props.data.previewImage} width={`${props.horizontal ? '150' : '260' }`} height={`${props.horizontal ? '110' : '200'}`} alt="Place image"/>
+          <img className="place-card__image" src={props.data.previewImage} width={`${props.horizontal ? '150' : '260' }`} height={`${props.horizontal ? '110' : '200'}`} alt="Place"/>
         </Link>
       </div>
       <div className="place-card__info">

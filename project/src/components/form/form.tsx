@@ -1,7 +1,5 @@
 import {ChangeEvent, useState} from 'react';
 
-
-
 function Form() {
 
   const [formData, setFormData] = useState({
@@ -60,7 +58,7 @@ function Form() {
             To submit review please make sure to set <span className="reviews__star">rating</span> and describe your stay with at least <b className="reviews__text-amount">50 characters</b>.
         </p>
         <div className="reviews__submit">
-          <button onClick={sendData} type="submit">Send</button>
+          <button onClick={sendData} className="reviews__submit form__submit button" type="submit">Submit</button>
         </div>
       </div>
     </form>

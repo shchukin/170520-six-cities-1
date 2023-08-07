@@ -1,9 +1,6 @@
 import {offersData} from '../../mocks/offersData';
 import PlaceCard from '../place-card/place-card';
 
-type NearPlacesProps = {
-  placeId: string;
-}
 function NearPlaces():JSX.Element {
   return (
     <div className="container">
@@ -18,7 +15,7 @@ function NearPlaces():JSX.Element {
         </div>
       </section>
     </div>
-  )
+  );
 }
 
 

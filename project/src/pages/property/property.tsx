@@ -35,7 +35,7 @@ function Property(): JSX.Element {
             currentOffer.images.length !== 0 &&
               <div className="property__gallery-container container">
                 <div className="property__gallery">
-                  {currentOffer.images.slice(0, settings.MaxPhotoOnDetailedPage).map((element) => <div className="property__image-wrapper" key={crypto.randomUUID()}><img src={element} alt="Photo studio"/></div>)}
+                  {currentOffer.images.slice(0, settings.MaxPhotoOnDetailedPage).map((element) => <div className="property__image-wrapper" key={crypto.randomUUID()}><img src={element} alt="Studio"/></div>)}
                 </div>
               </div>
           }
@@ -51,7 +51,7 @@ function Property(): JSX.Element {
                 <h1 className="property__name">
                   {currentOffer.title}
                 </h1>
-                <button className={`property__bookmark-button${ currentOffer.isFavorite && ' property__bookmark-button--active' } button`} type="button">
+                <button className={`property__bookmark-button${ currentOffer.isFavorite ? ' property__bookmark-button--active' : '' } button`} type="button">
                   <svg className="property__bookmark-icon" width="31" height="33">
                     <use xlinkHref="#icon-bookmark"></use>
                   </svg>
@@ -115,7 +115,7 @@ function Property(): JSX.Element {
                 <h2 className="reviews__title">Reviews &middot; <span className="reviews__amount">1</span></h2>
                 <ul className="reviews__list">
                   {
-                    commentsData.map((element) => <ReviewsItem data={element}/>)
+                    commentsData.map((element) => <ReviewsItem key={element.id} data={element}/>)
                   }
                 </ul>
                 <div className="reviews__form">
