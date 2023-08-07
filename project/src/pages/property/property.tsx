@@ -10,7 +10,7 @@ import NotFound from '../not-found/not-found';
 import PlaceCard from '../../components/place-card/place-card';
 import {commentsData} from '../../mocks/comments';
 import ReviewsItem from '../../components/reviews-item/reviews-item';
-import Form from '../../components/form/form';
+import ReviewsForm from '../../components/reviews-form/reviews-form';
 
 function Property(): JSX.Element {
 
@@ -119,7 +119,7 @@ function Property(): JSX.Element {
                   }
                 </ul>
                 <div className="reviews__form">
-                  <Form />
+                  <ReviewsForm />
                 </div>
               </section>
             </div>
