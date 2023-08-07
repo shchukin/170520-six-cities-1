@@ -1,7 +1,7 @@
 import {UserType} from './userType';
-import {HousingKindType} from './housingKindType';
 import {CityType} from './cityType';
 import {LocationType} from './locationType';
+import {HOUSING_KINDS} from '../const';
 
 export type OfferType = {
   id: number;
@@ -10,7 +10,7 @@ export type OfferType = {
   isFavorite: boolean;
   rating: number;
   price: number;
-  type: HousingKindType;
+  type: keyof typeof HOUSING_KINDS;
   bedrooms: number;
   maxAdults: number;
   description: string;
