@@ -1,11 +1,16 @@
 import {CommentType} from '../../types/commentType';
 import {starsToPct} from '../../utils';
+import {MONTHS} from '../../const';
 
 type ReviewsItemProps = {
   data: CommentType;
 }
 
 function ReviewsItem(props: ReviewsItemProps): JSX.Element {
+
+  const date = new Date(props.data.date);
+
+
   return (
     <li className="reviews__item">
       <div className="reviews__user user">
@@ -28,7 +33,14 @@ function ReviewsItem(props: ReviewsItemProps): JSX.Element {
             props.data.comment
           }
         </p>
-        <time className="reviews__time" dateTime={props.data.date}>{props.data.date}</time>
+        <time className="reviews__time" dateTime={
+          `${date.getFullYear()}-${(date.getMonth() + 1).toString().padStart(2, '0')}-${date.getDay().toString().padStart(2, '0')}`
+        }
+        >
+          {
+            `${MONTHS[date.getMonth()]} ${date.getFullYear()}`
+          }
+        </time>
       </div>
     </li>
   );
