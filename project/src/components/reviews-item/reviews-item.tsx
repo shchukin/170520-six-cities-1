@@ -10,7 +10,6 @@ function ReviewsItem(props: ReviewsItemProps): JSX.Element {
 
   const date = new Date(props.data.date);
 
-
   return (
     <li className="reviews__item">
       <div className="reviews__user user">
