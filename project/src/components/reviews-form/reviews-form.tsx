@@ -7,12 +7,12 @@ function ReviewsForm() {
     rating: 0
   });
 
-  const fieldChangeHandle = (event: ChangeEvent<HTMLInputElement>) => {
+  const fieldChangeHandle = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const {name, value} = event.target;
     setFormData({...formData, [name]: value});
   };
 
-  const sendData = (event: ChangeEvent<HTMLButtonElement>) => {
+  const sendData = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.nativeEvent.preventDefault();
   };
 
@@ -51,7 +51,6 @@ function ReviewsForm() {
           </svg>
         </label>
       </div>
-      <input onChange={fieldChangeHandle} value={formData.rating} type="text" name="rating"/>
       <textarea onChange={fieldChangeHandle} value={formData.comment} className="reviews__textarea form__textarea" id="comment" name="comment" placeholder="Tell how was your stay, what you like and what can be improved"></textarea>
       <div className="reviews__button-wrapper">
         <p className="reviews__help">
