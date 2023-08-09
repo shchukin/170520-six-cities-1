@@ -1,12 +1,12 @@
 import PlaceCard from '../../components/place-card/place-card';
 import Header from '../../components/header/header';
 import Footer from '../../components/footer/footer';
+import {settings} from '../../settings';
+import {offersData} from '../../mocks/offersData';
 
-type PlaceCardProps = {
-  offersAmount: number;
-}
 
-function Main({offersAmount}: PlaceCardProps): JSX.Element {
+function Main(): JSX.Element {
+
   return (
     <div className="page page--gray page--main">
       <Header/>
@@ -68,10 +68,9 @@ function Main({offersAmount}: PlaceCardProps): JSX.Element {
                   <li className="places__option" tabIndex={0}>Top rated first</li>
                 </ul>
               </form>
-              <div className="cities__places-list places__list tabs__content">
-                {
-                  Array.from(Array(offersAmount), (e, i) => <div className={'cities__card'} key={i}><PlaceCard/></div>)
-                }
+              <div className="cities__places-list places__list tabs__content">{
+                offersData.slice(0, settings.OffersAmountOnMainPage).map( (element, index) => <div className={'cities__card'} key={element.id}><PlaceCard data={element}/></div>)
+              }
               </div>
               <Footer noContainer/>
             </section>

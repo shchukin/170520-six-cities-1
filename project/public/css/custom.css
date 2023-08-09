@@ -79,3 +79,29 @@
 .logo:not(.logo--active):hover {
   opacity: .5
 }
+
+
+.wysiwyg p {
+  margin-top: 0;
+  margin-bottom: 28px;
+  font-size: 16px;
+  line-height: 1.75;
+  color: #000
+}
+
+.favorites__card {
+  display: block;
+}
+
+.place-card--horizontal {
+  display: flex;
+}
+  .place-card--horizontal .place-card__image-wrapper {
+    min-width: 150px;
+    margin-right: 16px;
+    margin-bottom: 0;
+  }
+
+  .place-card--horizontal .place-card__info {
+    padding-top: 1px;
+  }
