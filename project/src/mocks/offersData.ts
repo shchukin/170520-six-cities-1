@@ -22,8 +22,8 @@ export const offersData: OfferType[] = [
       'isPro': true
     },
     'location': {
-      'latitude': 52.370216,
-      'longitude': 4.895168,
+      'latitude': 52.3909553943508,
+      'longitude': 4.85309666406198,
       'zoom': 10
     },
     'city': {
@@ -56,8 +56,8 @@ export const offersData: OfferType[] = [
       'isPro': true
     },
     'location': {
-      'latitude': 52.370216,
-      'longitude': 4.895168,
+      'latitude': 52.3609553943508,
+      'longitude': 4.85309666406198,
       'zoom': 10
     },
     'city': {
@@ -90,8 +90,8 @@ export const offersData: OfferType[] = [
       'isPro': true
     },
     'location': {
-      'latitude': 52.370216,
-      'longitude': 4.895168,
+      'latitude': 52.3909553943508,
+      'longitude': 4.929309666406198,
       'zoom': 10
     },
     'city': {
@@ -124,8 +124,8 @@ export const offersData: OfferType[] = [
       'isPro': false
     },
     'location': {
-      'latitude': 52.370216,
-      'longitude': 4.895168,
+      'latitude': 52.3809553943508,
+      'longitude': 4.939309666406198,
       'zoom': 10
     },
     'city': {
@@ -158,8 +158,8 @@ export const offersData: OfferType[] = [
       'isPro': false
     },
     'location': {
-      'latitude': 52.370216,
-      'longitude': 4.895168,
+      'latitude': 52.39,
+      'longitude': 4.92,
       'zoom': 10
     },
     'city': {
@@ -192,8 +192,8 @@ export const offersData: OfferType[] = [
       'isPro': false
     },
     'location': {
-      'latitude': 52.370216,
-      'longitude': 4.895168,
+      'latitude': 52.37,
+      'longitude': 4.91,
       'zoom': 10
     },
     'city': {
