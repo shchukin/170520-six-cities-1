@@ -1,6 +1,7 @@
 import PlaceCard from '../../components/place-card/place-card';
 import Header from '../../components/header/header';
 import Footer from '../../components/footer/footer';
+import Map from '../../components/map/map';
 import {settings} from '../../settings';
 import {offersData} from '../../mocks/offersData';
 
@@ -75,7 +76,9 @@ function Main(): JSX.Element {
               <Footer noContainer/>
             </section>
             <div className="cities__right-section">
-              <section className="cities__map map"></section>
+              <section className="cities__map">
+                <Map data={offersData.slice(0, settings.OffersAmountOnMainPage)}/>
+              </section>
             </div>
           </div>
         </div>

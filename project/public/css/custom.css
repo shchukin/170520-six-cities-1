@@ -105,3 +105,8 @@
   .place-card--horizontal .place-card__info {
     padding-top: 1px;
   }
+
+
+.cities__map {
+  background-image: none;
+}
