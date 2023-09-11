@@ -10,27 +10,36 @@ type MapProps = {
 function Map(props: MapProps): JSX.Element {
 
   const mapRef = useRef(null);
-  let flag = false;
+  let mapRenderedFlag = false;
 
   useEffect(() => {
 
-    if (mapRef.current !== null && !flag ) {
+    if (mapRef.current !== null && !mapRenderedFlag ) {
 
-      leaflet.map(mapRef.current, {
+      const instance = leaflet.map(mapRef.current, {
         center: {
           lat: 52.370216,
           lng: 4,
         },
-        zoom: 5,
+        zoom: 8,
       });
 
-      flag = true;
+      leaflet
+        .tileLayer(
+          'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
+          {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+          },
+        )
+        .addTo(instance);
+
+      mapRenderedFlag = true;
     }
 
   }, [mapRef]);
 
   return (
-    <div className="map" id="map" ref={mapRef}>
+    <div className="map" ref={mapRef}>
 
     </div>
   );
