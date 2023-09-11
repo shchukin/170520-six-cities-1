@@ -2,6 +2,7 @@ import {useEffect, useRef} from 'react';
 import {OfferType} from '../../types/offerType';
 import leaflet from 'leaflet';
 import 'leaflet/dist/leaflet.css';
+import {URL_MARKER_DEFAULT} from '../../const';
 
 type MapProps = {
   data: OfferType[];
@@ -12,16 +13,22 @@ function Map(props: MapProps): JSX.Element {
   const mapRef = useRef(null);
   let mapRenderedFlag = false;
 
+  const defaultCustomIcon = leaflet.icon({
+    iconUrl: URL_MARKER_DEFAULT,
+    iconSize: [27, 39],
+    iconAnchor: [20, 40],
+  });
+
   useEffect(() => {
 
-    if (mapRef.current !== null && !mapRenderedFlag ) {
+    if (mapRef.current !== null && !mapRenderedFlag) {
 
       const instance = leaflet.map(mapRef.current, {
         center: {
           lat: 52.370216,
-          lng: 4,
+          lng: 4.895168,
         },
-        zoom: 8,
+        zoom: 12,
       });
 
       leaflet
@@ -33,8 +40,21 @@ function Map(props: MapProps): JSX.Element {
         )
         .addTo(instance);
 
+      props.data.map((element) => {
+        leaflet
+          .marker({
+            lat: element.location.latitude,
+            lng: element.location.longitude,
+          }, {
+            icon: defaultCustomIcon,
+          })
+          .addTo(instance);
+      });
+
+
       mapRenderedFlag = true;
     }
+
 
   }, [mapRef]);
 
