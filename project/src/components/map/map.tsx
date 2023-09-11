@@ -1,4 +1,7 @@
+import {useEffect, useRef} from 'react';
 import {OfferType} from '../../types/offerType';
+import leaflet from 'leaflet';
+import 'leaflet/dist/leaflet.css';
 
 type MapProps = {
   data: OfferType[];
@@ -6,12 +9,30 @@ type MapProps = {
 
 function Map(props: MapProps): JSX.Element {
 
-  props.data.map((element)=>{
-    console.log(element.location);
-  });
+  const mapRef = useRef(null);
+  let flag = false;
 
-  return(
-    <div className="map">1</div>
+  useEffect(() => {
+
+    if (mapRef.current !== null && !flag ) {
+
+      leaflet.map(mapRef.current, {
+        center: {
+          lat: 52.370216,
+          lng: 4,
+        },
+        zoom: 5,
+      });
+
+      flag = true;
+    }
+
+  }, [mapRef]);
+
+  return (
+    <div className="map" id="map" ref={mapRef}>
+
+    </div>
   );
 }
 
