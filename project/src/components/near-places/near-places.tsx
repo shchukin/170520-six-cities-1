@@ -15,7 +15,7 @@ function NearPlaces(props: NearPlacesProps): JSX.Element {
         </h2>
         <div className="near-places__list">
           {
-            props.data.slice(0, 3).map((element, index) => <div className={'near-places__card'} key={element.id}><PlaceCard data={element}/></div>)
+            props.data.map((element, index) => <div className={'near-places__card'} key={element.id}><PlaceCard data={element}/></div>)
           }
         </div>
       </section>
