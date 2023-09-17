@@ -1,7 +1,7 @@
 import {offersData} from '../../mocks/offersData';
 import PlaceCard from '../place-card/place-card';
 
-function NearPlaces():JSX.Element {
+function NearPlaces(): JSX.Element {
   return (
     <div className="container">
       <section className="near-places">
@@ -19,5 +19,5 @@ function NearPlaces():JSX.Element {
 }
 
 
-export default NearPlaces();
+export default NearPlaces;
 

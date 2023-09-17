@@ -7,7 +7,7 @@ import {pluralize, starsToPct} from '../../utils';
 import {HOUSING_KINDS} from '../../const';
 import {settings} from '../../settings';
 import NotFound from '../not-found/not-found';
-import PlaceCard from '../../components/place-card/place-card';
+import NearPlaces from '../../components/near-places/near-places';
 import {commentsData} from '../../mocks/comments';
 import ReviewsItem from '../../components/reviews-item/reviews-item';
 import ReviewsForm from '../../components/reviews-form/reviews-form';
@@ -124,20 +124,11 @@ function Property(): JSX.Element {
               </section>
             </div>
           </div>
-          <section className="property__map map"></section>
-        </section>
-        <div className="container">
-          <section className="near-places">
-            <h2 className="near-places__title">
-              Other places in the neighbourhood
-            </h2>
-            <div className="near-places__list">
-              {
-                offersData.filter((element) => element.id !== offerId).slice(0, 3).map((element) => <div className={'near-places__card'} key={element.id}><PlaceCard data={element}/></div>)
-              }
-            </div>
+          <section className="property__map map">
+            MAP
           </section>
-        </div>
+        </section>
+        <NearPlaces/>
       </main>
       <Footer/>
     </div>
