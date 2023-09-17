@@ -9,7 +9,7 @@ type ReviewsProps = {
 function Reviews(props: ReviewsProps): JSX.Element {
   return (
     <section className="reviews">
-      <h2 className="reviews__title">Reviews &middot; <span className="reviews__amount">1</span></h2>
+      <h2 className="reviews__title">Reviews &middot; <span className="reviews__amount">{props.data.length}</span></h2>
       <ul className="reviews__list">
         {
           props.data.map((element) => <ReviewsItem key={element.id} data={element}/>)
