@@ -119,7 +119,7 @@ function Property(): JSX.Element {
             MAP
           </section>
         </section>
-        <NearPlaces/>
+        <NearPlaces data={offersData}/>
       </main>
       <Footer/>
     </div>
