@@ -3,6 +3,7 @@ import Footer from '../../components/footer/footer';
 import {useParams} from 'react-router-dom';
 import {OfferType} from '../../types/offerType';
 import {offersData} from '../../mocks/offersData';
+import {commentsData} from '../../mocks/comments';
 import {pluralize, starsToPct} from '../../utils';
 import {HOUSING_KINDS} from '../../const';
 import {settings} from '../../settings';
@@ -110,7 +111,7 @@ function Property(): JSX.Element {
                 </div>
               </div>
               <div className="property__reviews">
-                <Reviews/>
+                <Reviews data={commentsData}/>
               </div>
             </div>
           </div>
