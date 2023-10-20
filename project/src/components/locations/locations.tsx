@@ -19,7 +19,7 @@ function Locations(): JSX.Element {
         {
           cities.map((element) =>
             <li className="locations__item">
-              <a className="locations__item-link tabs__item" href="#" onClick={() => dispatch(changeCity())}>
+              <a className="locations__item-link tabs__item" href="#" onClick={() => dispatch(changeCity(element))}>
                 <span>{element}</span>
               </a>
             </li>
