@@ -1,6 +1,15 @@
 import {createReducer} from '@reduxjs/toolkit';
 import {changeCity} from './action';
 
+const citiesList = [
+  'Paris',
+  'Cologne',
+  'Brussels',
+  'Amsterdam',
+  'Hamburg',
+  'Dusseldorf'
+];
+
 const initialState = {
   city: 'Paris'
 };
@@ -12,4 +21,4 @@ const cityReducer = createReducer(initialState, (builder) => {
     });
 });
 
-export {cityReducer};
+export {cityReducer, citiesList};
