@@ -6,7 +6,6 @@ import {settings} from '../../settings';
 import {offersData} from '../../mocks/offersData';
 import Locations from '../../components/locations/locations';
 import {useSelector} from "react-redux";
-import {cityReducer} from "../../store/reducer";
 
 
 function Main(): JSX.Element {
