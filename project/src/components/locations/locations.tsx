@@ -1,9 +1,10 @@
 import {changeCity} from '../../store/action';
-import {useDispatch} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import {citiesList} from "../../store/reducer";
 
 function Locations(): JSX.Element {
   const dispatch = useDispatch();
+  const currentCity = useSelector(state => state.city)
 
   return (
     <section className="locations container">
@@ -11,7 +12,7 @@ function Locations(): JSX.Element {
         {
           citiesList.map((element) =>
             <li className="locations__item">
-              <a className="locations__item-link tabs__item" href="#" onClick={() => dispatch(changeCity(element))}>
+              <a className={`locations__item-link tabs__item${element == currentCity ? ' tabs__item--active' : ''}`} href="#" onClick={() => dispatch(changeCity(element))}>
                 <span>{element}</span>
               </a>
             </li>
