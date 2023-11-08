@@ -3,14 +3,15 @@ import Header from '../../components/header/header';
 import Footer from '../../components/footer/footer';
 import Map from '../../components/map/map';
 import {settings} from '../../settings';
-import {offersData} from '../../mocks/offersData';
 import Locations from '../../components/locations/locations';
 import {useSelector} from "react-redux";
 
 
 function Main(): JSX.Element {
 
-  const currentCity = useSelector((state) => state.city)
+  const currentCity = useSelector((state) => state.city);
+
+  const offersData = useSelector((state) => state.offers);
 
   return (
     <div className="page page--gray page--main">
