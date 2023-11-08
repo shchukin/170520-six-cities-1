@@ -46,74 +46,74 @@ const initialState = {
       'name': 'Amsterdam'
     }
   },
-    {
+  {
+    'id': 2,
+    'title': 'Wood and stone place',
+    'isPremium': false,
+    'isFavorite': true,
+    'rating': 4,
+    'price': 80,
+    'type': 'room',
+    'bedrooms': 1,
+    'maxAdults': 2,
+    'description': 'This charming cottage nestled in a tranquil forest setting offers the perfect escape from the hustle and bustle of daily life.\n\nIts rustic interior and private garden make it an ideal spot for nature lovers seeking a peaceful retreat',
+    'images': ['img/apartment-02.jpg', 'img/apartment-01.jpg', 'img/apartment-03.jpg'],
+    'previewImage': 'img/apartment-02.jpg',
+    'goods': ['Wi-Fi', 'Washing machine', 'Towels', 'Heating', 'Coffee machine', 'Baby seat', 'Kitchen', 'Dishwasher', 'Cabel TV', 'Fridge'],
+    'host': {
       'id': 2,
-      'title': 'Wood and stone place',
-      'isPremium': false,
-      'isFavorite': true,
-      'rating': 4,
-      'price': 80,
-      'type': 'room',
-      'bedrooms': 1,
-      'maxAdults': 2,
-      'description': 'This charming cottage nestled in a tranquil forest setting offers the perfect escape from the hustle and bustle of daily life.\n\nIts rustic interior and private garden make it an ideal spot for nature lovers seeking a peaceful retreat',
-      'images': ['img/apartment-02.jpg', 'img/apartment-01.jpg', 'img/apartment-03.jpg'],
-      'previewImage': 'img/apartment-02.jpg',
-      'goods': ['Wi-Fi', 'Washing machine', 'Towels', 'Heating', 'Coffee machine', 'Baby seat', 'Kitchen', 'Dishwasher', 'Cabel TV', 'Fridge'],
-      'host': {
-        'id': 2,
-        'avatarUrl': 'img/avatar-angelina.jpg',
-        'name': 'Valery',
-        'isPro': true
-      },
-      'location': {
-        'latitude': 52.3609553943508,
-        'longitude': 4.85309666406198,
-        'zoom': 10
-      },
-      'city': {
-        'location': {
-          'latitude': 52.370216,
-          'longitude': 4.895168,
-          'zoom': 10
-        },
-        'name': 'Cologne'
-      }
+      'avatarUrl': 'img/avatar-angelina.jpg',
+      'name': 'Valery',
+      'isPro': true
     },
-    {
-      'id': 3,
-      'title': 'Canal View Prinsengracht',
-      'isPremium': false,
-      'isFavorite': true,
-      'rating': 4.2,
-      'price': 132,
-      'type': 'apartment',
-      'bedrooms': 4,
-      'maxAdults': 9,
-      'description': 'Urban Oasis.\n\nA modern, stylish apartment located in the heart of the city.\n\nWith floor-to-ceiling windows that provide stunning skyline views,\n this property is a sanctuary in the midst of the urban jungle.',
-      'images': ['img/apartment-03.jpg', 'img/apartment-02.jpg', 'img/apartment-01.jpg', 'img/apartment-03.jpg', 'img/apartment-02.jpg', 'img/apartment-01.jpg', 'img/apartment-03.jpg', 'img/apartment-02.jpg', 'img/apartment-01.jpg'],
-      'previewImage': 'img/apartment-03.jpg',
-      'goods': ['Wi-Fi', 'Washing machine', 'Towels', 'Heating', 'Coffee machine', 'Baby seat', 'Kitchen', 'Dishwasher', 'Cabel TV', 'Fridge'],
-      'host': {
-        'id': 3,
-        'avatarUrl': 'img/avatar-angelina.jpg',
-        'name': 'Valery',
-        'isPro': true
-      },
+    'location': {
+      'latitude': 52.3609553943508,
+      'longitude': 4.85309666406198,
+      'zoom': 10
+    },
+    'city': {
       'location': {
-        'latitude': 52.3909553943508,
-        'longitude': 4.929309666406198,
+        'latitude': 52.370216,
+        'longitude': 4.895168,
         'zoom': 10
       },
-      'city': {
-        'location': {
-          'latitude': 52.370216,
-          'longitude': 4.895168,
-          'zoom': 10
-        },
-        'name': 'Amsterdam'
-      }
-    }]
+      'name': 'Cologne'
+    }
+  },
+  {
+    'id': 3,
+    'title': 'Canal View Prinsengracht',
+    'isPremium': false,
+    'isFavorite': true,
+    'rating': 4.2,
+    'price': 132,
+    'type': 'apartment',
+    'bedrooms': 4,
+    'maxAdults': 9,
+    'description': 'Urban Oasis.\n\nA modern, stylish apartment located in the heart of the city.\n\nWith floor-to-ceiling windows that provide stunning skyline views,\n this property is a sanctuary in the midst of the urban jungle.',
+    'images': ['img/apartment-03.jpg', 'img/apartment-02.jpg', 'img/apartment-01.jpg', 'img/apartment-03.jpg', 'img/apartment-02.jpg', 'img/apartment-01.jpg', 'img/apartment-03.jpg', 'img/apartment-02.jpg', 'img/apartment-01.jpg'],
+    'previewImage': 'img/apartment-03.jpg',
+    'goods': ['Wi-Fi', 'Washing machine', 'Towels', 'Heating', 'Coffee machine', 'Baby seat', 'Kitchen', 'Dishwasher', 'Cabel TV', 'Fridge'],
+    'host': {
+      'id': 3,
+      'avatarUrl': 'img/avatar-angelina.jpg',
+      'name': 'Valery',
+      'isPro': true
+    },
+    'location': {
+      'latitude': 52.3909553943508,
+      'longitude': 4.929309666406198,
+      'zoom': 10
+    },
+    'city': {
+      'location': {
+        'latitude': 52.370216,
+        'longitude': 4.895168,
+        'zoom': 10
+      },
+      'name': 'Amsterdam'
+    }
+  }]
 };
 
 const cityReducer = createReducer(initialState, (builder) => {
