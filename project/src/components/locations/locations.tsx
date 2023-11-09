@@ -7,9 +7,9 @@ import {citiesList} from "../../store/reducer";
 
 function Locations(): JSX.Element {
   const dispatch = useDispatch();
-  const currentCity = useSelector(state => state.city)
+  const currentCity = useSelector(state => state.city);
 
-  const handleChangeCity = (newCity) => {
+  const handleChangeCity = (newCity: string) => {
     dispatch(changeCity(newCity));
     dispatch(fetchOffers());
   };

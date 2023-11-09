@@ -5,6 +5,7 @@ import Map from '../../components/map/map';
 import {settings} from '../../settings';
 import Locations from '../../components/locations/locations';
 import {useSelector} from "react-redux";
+import {OfferType} from "../../types/offerType";
 
 
 function Main(): JSX.Element {
@@ -42,7 +43,7 @@ function Main(): JSX.Element {
                 </ul>
               </form>
               <div className="cities__places-list places__list tabs__content">{
-                offersData.slice(0, settings.OffersAmountOnMainPage).map( (element, index) => <div className={'cities__card'} key={element.id}><PlaceCard data={element}/></div>)
+                offersData.slice(0, settings.OffersAmountOnMainPage).map( (element: OfferType) => <div className={'cities__card'} key={element.id}><PlaceCard data={element}/></div>)
               }
               </div>
               <Footer noContainer/>
