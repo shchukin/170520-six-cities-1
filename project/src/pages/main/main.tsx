@@ -42,7 +42,7 @@ function Main(): JSX.Element {
                 </ul>
               </form>
               <div className="cities__places-list places__list tabs__content">{
-                offersData.slice(0, settings.OffersAmountOnMainPage).map((element: OfferType) => <div className={'cities__card'} key={element.id}><PlaceCard data={element}/></div>)
+                offersData.slice(0, settings.OffersAmountOnMainPage).map((element) => <div className={'cities__card'} key={element.id}><PlaceCard data={element}/></div>)
               }
               </div>
               <Footer noContainer/>
