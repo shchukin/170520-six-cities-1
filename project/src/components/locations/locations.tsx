@@ -12,12 +12,13 @@ function Locations(): JSX.Element {
     dispatch(fetchOffers());
   };
 
+
   return (
     <section className="locations container">
       <ul className="locations__list tabs__list">
         {
           citiesList.map((element) => (
-            <li className="locations__item">
+            <li className="locations__item" key={element}>
               <a className={`locations__item-link tabs__item${element === currentCity ? ' tabs__item--active' : ''}`} href="#" onClick={() => handleChangeCity(element)}>
                 <span>{element}</span>
               </a>

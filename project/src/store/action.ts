@@ -1,7 +1,7 @@
 import {createAction} from '@reduxjs/toolkit';
 
 export const changeCity = createAction('CHANGE_CITY', (city) => {
-  return { payload: { city } };
+  return {payload: {city}};
 });
 
 
@@ -9,39 +9,39 @@ export const fetchOffers = createAction('FETCH_OFFER', () => {
 
   const offers = [
     {
-    'id': 4,
-    'title': 'Nice, cozy, warm big bed apartment',
-    'isPremium': true,
-    'isFavorite': false,
-    'rating': 5,
-    'price': 180,
-    'type': 'apartment',
-    'bedrooms': 3,
-    'maxAdults': 5,
-    'description': 'Urban Oasis.\n\nA modern, stylish apartment located in the heart of the city.\n\nWith floor-to-ceiling windows that provide stunning skyline views, this property is a sanctuary in the midst of the urban jungle.',
-    'images': ['img/apartment-03.jpg', 'img/apartment-02.jpg', 'img/apartment-01.jpg'],
-    'previewImage': 'img/apartment-03.jpg',
-    'goods': ['Wi-Fi', 'Washing machine', 'Towels', 'Heating', 'Coffee machine', 'Baby seat', 'Kitchen', 'Dishwasher', 'Cabel TV', 'Fridge'],
-    'host': {
       'id': 4,
-      'avatarUrl': 'img/avatar-angelina.jpg',
-      'name': 'Dany',
-      'isPro': false
-    },
-    'location': {
-      'latitude': 52.3809553943508,
-      'longitude': 4.939309666406198,
-      'zoom': 10
-    },
-    'city': {
+      'title': 'Nice, cozy, warm big bed apartment',
+      'isPremium': true,
+      'isFavorite': false,
+      'rating': 5,
+      'price': 180,
+      'type': 'apartment',
+      'bedrooms': 3,
+      'maxAdults': 5,
+      'description': 'Urban Oasis.\n\nA modern, stylish apartment located in the heart of the city.\n\nWith floor-to-ceiling windows that provide stunning skyline views, this property is a sanctuary in the midst of the urban jungle.',
+      'images': ['img/apartment-03.jpg', 'img/apartment-02.jpg', 'img/apartment-01.jpg'],
+      'previewImage': 'img/apartment-03.jpg',
+      'goods': ['Wi-Fi', 'Washing machine', 'Towels', 'Heating', 'Coffee machine', 'Baby seat', 'Kitchen', 'Dishwasher', 'Cabel TV', 'Fridge'],
+      'host': {
+        'id': 4,
+        'avatarUrl': 'img/avatar-angelina.jpg',
+        'name': 'Dany',
+        'isPro': false
+      },
       'location': {
-        'latitude': 52.370216,
-        'longitude': 4.895168,
+        'latitude': 52.3809553943508,
+        'longitude': 4.939309666406198,
         'zoom': 10
       },
-      'name': 'Cologne'
-    }
-  },
+      'city': {
+        'location': {
+          'latitude': 52.370216,
+          'longitude': 4.895168,
+          'zoom': 10
+        },
+        'name': 'Cologne'
+      }
+    },
     {
       'id': 5,
       'title': 'Artistic Loft Studio',
