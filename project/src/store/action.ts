@@ -118,4 +118,3 @@ export const fetchOffers = createAction('FETCH_OFFER', () => {
     },
   };
 });
-

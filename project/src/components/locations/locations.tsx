@@ -1,11 +1,12 @@
 import {changeCity, fetchOffers} from '../../store/action';
-import {useDispatch, useSelector} from 'react-redux';
+import {useDispatch} from 'react-redux';
 import {citiesList} from '../../store/reducer';
+import {useAppSelector} from '../../index';
 
 
 function Locations(): JSX.Element {
   const dispatch = useDispatch();
-  const currentCity = useSelector(state => state.city);
+  const currentCity = useAppSelector(state => state.city);
 
   const handleChangeCity = (newCity: string) => {
     dispatch(changeCity(newCity));
