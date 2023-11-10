@@ -4,7 +4,6 @@ import Footer from '../../components/footer/footer';
 import Map from '../../components/map/map';
 import {settings} from '../../settings';
 import Locations from '../../components/locations/locations';
-import {OfferType} from '../../types/offerType';
 import {useAppSelector} from '../../index';
 
 

@@ -1,5 +1,6 @@
 import {createReducer} from '@reduxjs/toolkit';
 import {fetchOffers, changeCity} from './action';
+import {OfferType} from "../types/offerType";
 
 const citiesList = [
   'Paris',
@@ -10,7 +11,7 @@ const citiesList = [
   'Dusseldorf'
 ];
 
-const initialState = {
+const initialState: {city: string, offers: OfferType[]} = {
   city: 'Paris',
   offers: [
     {

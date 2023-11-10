@@ -1,4 +1,5 @@
 import {createAction} from '@reduxjs/toolkit';
+import {OfferType} from "../types/offerType";
 
 export const changeCity = createAction('CHANGE_CITY', (city) => {
   return {payload: {city}};
@@ -7,7 +8,7 @@ export const changeCity = createAction('CHANGE_CITY', (city) => {
 
 export const fetchOffers = createAction('FETCH_OFFER', () => {
 
-  const offers = [
+  const offers: OfferType[] = [
     {
       'id': 4,
       'title': 'Nice, cozy, warm big bed apartment',
