@@ -1,9 +1,10 @@
 import {useState} from 'react';
 import {useAppSelector} from '../../index';
+import {SORT} from '../../const';
 
 function PlacesSorting(): JSX.Element {
 
-  const sort = useAppSelector((state) => state.sort);
+  const currentSort = useAppSelector((state) => state.sort);
 
 
   // https://www.letsbuildui.dev/articles/building-a-dropdown-menu-component-with-react-hooks/
@@ -29,16 +30,15 @@ function PlacesSorting(): JSX.Element {
     <form className="places__sorting" action="#" method="get">
       <span className="places__sorting-caption">Sort by</span>
       <span className="places__sorting-type" tabIndex={0} onClick={()=>{ setIsExpanded(!isExpanded); }}>
-        {sort}
+        {currentSort}
         <svg className="places__sorting-arrow" width="7" height="4">
           <use xlinkHref="#icon-arrow-select"></use>
         </svg>
       </span>
       <ul className={`places__options places__options--custom${isExpanded ? ' places__options--opened' : ''}`}>
-        <li className="places__option places__option--active" tabIndex={0}>Popular</li>
-        <li className="places__option" tabIndex={0}>Price: low to high</li>
-        <li className="places__option" tabIndex={0}>Price: high to low</li>
-        <li className="places__option" tabIndex={0}>Top rated first</li>
+        {
+          Object.values(SORT).map((element) => <li key={element} className={`places__option${ element === currentSort ? ' places__option--active' : '' }`} tabIndex={0}>{element}</li>)
+        }
       </ul>
     </form>
   );

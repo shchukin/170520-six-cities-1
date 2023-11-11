@@ -126,3 +126,7 @@
 .places__options {
   overflow: hidden;
 }
+
+.places__option {
+  user-select: none;
+}
