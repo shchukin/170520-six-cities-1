@@ -6,12 +6,19 @@ import {settings} from '../../settings';
 import Locations from '../../components/locations/locations';
 import PlacesSorting from '../../components/places-sorting/places-sorting';
 import {useAppSelector} from '../../index';
+import {useState} from 'react';
 
 
 function Main(): JSX.Element {
 
   const currentCity = useAppSelector((state) => state.city);
   const offersData = useAppSelector((state) => state.offers);
+
+  const [selectedPoint, setSelectedPoint] = useState({});
+
+  const onListItemHover = (listItemName) => {
+    setSelectedPoint(listItemName);
+  };
 
   return (
     <div className="page page--gray page--main">
@@ -28,14 +35,14 @@ function Main(): JSX.Element {
               <b className="places__found">312 places to stay in {currentCity}</b>
               <PlacesSorting/>
               <div className="cities__places-list places__list tabs__content">{
-                offersData.slice(0, settings.OffersAmountOnMainPage).map((element) => <div className={'cities__card'} key={element.id}><PlaceCard data={element}/></div>)
+                offersData.slice(0, settings.OffersAmountOnMainPage).map((element) => <div className={'cities__card'} key={element.id}><PlaceCard data={element} onListItemHover={onListItemHover}/></div>)
               }
               </div>
               <Footer noContainer/>
             </section>
             <div className="cities__right-section">
               <section className="cities__map">
-                <Map data={offersData.slice(0, settings.OffersAmountOnMainPage)}/>
+                <Map selectedPoint={selectedPoint} data={offersData.slice(0, settings.OffersAmountOnMainPage)}/>
               </section>
             </div>
           </div>
