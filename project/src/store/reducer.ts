@@ -1,6 +1,7 @@
 import {createReducer} from '@reduxjs/toolkit';
 import {fetchOffers, changeCity, changeSort} from './action';
 import {OfferType} from '../types/offerType';
+import {SORT} from '../const';
 
 const citiesList = [
   'Paris',
@@ -11,15 +12,8 @@ const citiesList = [
   'Dusseldorf'
 ];
 
-const sort = [
-  'Popular',
-  'Price: low to high',
-  'Price: high to low',
-  'Top rated first',
-];
-
 const initialState: { sort: string; city: string; offers: OfferType[] } = {
-  sort: sort[0],
+  sort: SORT.Popular,
   city: citiesList[0],
   offers: [
     {
