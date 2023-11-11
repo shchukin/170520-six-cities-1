@@ -26,7 +26,7 @@ function Main(): JSX.Element {
             <section className="cities__places places">
               <h2 className="visually-hidden">Places</h2>
               <b className="places__found">312 places to stay in {currentCity}</b>
-              <PlacesSorting />
+              <PlacesSorting/>
               <div className="cities__places-list places__list tabs__content">{
                 offersData.slice(0, settings.OffersAmountOnMainPage).map((element) => <div className={'cities__card'} key={element.id}><PlaceCard data={element}/></div>)
               }

@@ -1,6 +1,10 @@
 import {useState} from 'react';
+import {useAppSelector} from '../../index';
 
 function PlacesSorting(): JSX.Element {
+
+  const sort = useAppSelector((state) => state.sort);
+
 
   // https://www.letsbuildui.dev/articles/building-a-dropdown-menu-component-with-react-hooks/
   // const $placesOptions = useRef(null);
@@ -25,7 +29,7 @@ function PlacesSorting(): JSX.Element {
     <form className="places__sorting" action="#" method="get">
       <span className="places__sorting-caption">Sort by</span>
       <span className="places__sorting-type" tabIndex={0} onClick={()=>{ setIsExpanded(!isExpanded); }}>
-        Popular
+        {sort}
         <svg className="places__sorting-arrow" width="7" height="4">
           <use xlinkHref="#icon-arrow-select"></use>
         </svg>
