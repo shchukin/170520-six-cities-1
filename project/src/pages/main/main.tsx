@@ -14,7 +14,9 @@ function Main(): JSX.Element {
   const currentCity = useAppSelector((state) => state.city);
   const offersData = useAppSelector((state) => state.offers);
 
-  const [selectedPoint, setSelectedPoint] = useState({});
+  const [selectedPoint, setSelectedPoint] = useState(null);
+
+  console.log(3, selectedPoint);
 
   const onListItemHover = (listItemName) => {
     setSelectedPoint(listItemName);
@@ -42,7 +44,7 @@ function Main(): JSX.Element {
             </section>
             <div className="cities__right-section">
               <section className="cities__map">
-                <Map selectedPoint={selectedPoint} data={offersData.slice(0, settings.OffersAmountOnMainPage)}/>
+                <Map currentOffer={selectedPoint} selectedPoint={selectedPoint} data={offersData.slice(0, settings.OffersAmountOnMainPage)}/>
               </section>
             </div>
           </div>

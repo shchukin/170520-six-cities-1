@@ -3,76 +3,84 @@ import {OfferType} from '../../types/offerType';
 import leaflet from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import {URL_MARKER_DEFAULT, URL_MARKER_CURRENT} from '../../const';
+import useMap from '../../hooks/useMap';
+import {Icon, Marker, layerGroup} from 'leaflet'
 
 type MapProps = {
   selectedPoint: OfferType;
   data: OfferType[];
 }
 
+const defaultCustomIcon = new Icon({
+  iconUrl: URL_MARKER_DEFAULT,
+  iconSize: [27, 39],
+  iconAnchor: [14, 39]
+});
+
+const currentCustomIcon = new Icon({
+  iconUrl: URL_MARKER_CURRENT,
+  iconSize: [27, 39],
+  iconAnchor: [14, 39]
+});
+
 function Map(props: MapProps): JSX.Element {
 
+  console.log(1, props)
+
   const mapRef = useRef(null);
-  let mapRenderedFlag = false;
 
-  const defaultCustomIcon = leaflet.icon({
-    iconUrl: URL_MARKER_DEFAULT,
-    iconSize: [27, 39],
-    iconAnchor: [20, 40],
-  });
-
-  const currentCustomIcon = leaflet.icon({
-    iconUrl: URL_MARKER_CURRENT,
-    iconSize: [27, 39],
-    iconAnchor: [20, 40],
-  });
+  const city = props.data[0].city;
+  const map = useMap(mapRef, city);
 
   useEffect(() => {
+    if (map) {
+      const placeLayer = layerGroup().addTo(map);
+      const currentCity = city;
+      map.setView([currentCity.location.latitude, currentCity.location.longitude], currentCity.location.zoom);
 
-    if (mapRef.current !== null && !mapRenderedFlag) {
+      props.data.forEach((offer) => {
 
-      const instance = leaflet.map(mapRef.current, {
-        center: {
-          lat: 52.370216,
-          lng: 4.895168,
-        },
-        zoom: 12,
-        scrollWheelZoom: false
-      });
+        console.log(5, offer);
 
-      leaflet
-        .tileLayer(
-          'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
-          {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-          },
+        const marker = new Marker({
+          lat: offer.location.latitude,
+          lng: offer.location.longitude
+        });
+
+        console.log(4, offer)
+
+        marker.setIcon(
+          props.selectedPoint !== undefined && offer && offer?.id === props.selectedPoint.id
+            ? currentCustomIcon
+            : defaultCustomIcon
         )
-        .addTo(instance);
-
-      props.data.map((element) => {
-
-        console.log(element.id , props.selectedPoint.id)
-
-        leaflet
-          .marker({
-            lat: element.location.latitude,
-            lng: element.location.longitude,
-          }, {
-            icon: (element.id === props.selectedPoint.id)
-              ? currentCustomIcon
-              : defaultCustomIcon,
-          })
-          .addTo(instance);
+          .addTo(placeLayer);
       });
 
-      mapRenderedFlag = true;
-    }
+      console.log(2, props.currentOffer)
 
-  }, [mapRef, props.data, props.selectedPoint]);
+      if (props.currentOffer) {
+        const currentMarker = new Marker({
+          lat: props.currentOffer.location.latitude,
+          lng: props.currentOffer.location.longitude
+        });
+
+        currentMarker.setIcon(currentCustomIcon).addTo(placeLayer);
+      }
+
+      return () => {
+        map.removeLayer(placeLayer);
+      };
+    }
+  }, [map, props.data, props.selectedPoint, city, props.currentOffer]);
 
   return (
-    <div className="map" ref={mapRef}>
-
-    </div>
+    <section
+      className="map"
+      style={{height: '100%'}}
+      ref={mapRef}
+    >
+    </section>
   );
 }
 
