@@ -2,6 +2,7 @@ import {useState} from 'react';
 
 function PlacesSorting(): JSX.Element {
 
+  // https://www.letsbuildui.dev/articles/building-a-dropdown-menu-component-with-react-hooks/
   // const $placesOptions = useRef(null);
   //
   // window.addEventListener('click', (event) => {
@@ -10,6 +11,13 @@ function PlacesSorting(): JSX.Element {
   //   }
   // });
   // <ul ref={$placesOptions}
+
+
+  window.addEventListener('keydown', (event) => {
+    if( event.key === 'Escape' ) {
+      setIsExpanded(false);
+    }
+  });
 
   const [isExpanded, setIsExpanded] = useState(false);
 
