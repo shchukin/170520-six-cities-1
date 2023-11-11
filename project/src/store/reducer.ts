@@ -11,9 +11,16 @@ const citiesList = [
   'Dusseldorf'
 ];
 
+const sort = [
+  'Popular',
+  'Price: low to high',
+  'Price: high to low',
+  'Top rated first',
+];
+
 const initialState: { sort: string; city: string; offers: OfferType[] } = {
-  sort: 'Popular',
-  city: 'Paris',
+  sort: sort[0],
+  city: citiesList[0],
   offers: [
     {
       'id': 1,

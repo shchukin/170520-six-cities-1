@@ -18,7 +18,6 @@ export const HOUSING_KINDS = {
   'hotel': 'Hotel',
 } as const;
 
-
 export const MONTHS = [
   'January',
   'February',
@@ -33,7 +32,6 @@ export const MONTHS = [
   'November',
   'December',
 ];
-
 
 export const URL_MARKER_DEFAULT = 'img/pin.svg';
 
