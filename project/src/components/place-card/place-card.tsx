@@ -5,7 +5,7 @@ import {AppRoute, HOUSING_KINDS} from '../../const';
 
 type PlaceCardProps = {
   horizontal?: boolean;
-  onListItemHover?: any;
+  onListItemHover?: (listItemName: OfferType) => void;
   data: OfferType;
 }
 
