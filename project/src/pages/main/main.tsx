@@ -44,7 +44,7 @@ function Main(): JSX.Element {
             </section>
             <div className="cities__right-section">
               <section className="cities__map">
-                <Map currentOffer={selectedPoint} selectedPoint={selectedPoint} data={offersData.slice(0, settings.OffersAmountOnMainPage)}/>
+                <Map data={offersData.slice(0, settings.OffersAmountOnMainPage)} selectedPoint={selectedPoint}/>
               </section>
             </div>
           </div>

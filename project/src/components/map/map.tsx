@@ -1,14 +1,13 @@
 import {useEffect, useRef} from 'react';
 import {OfferType} from '../../types/offerType';
-import leaflet from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import {URL_MARKER_DEFAULT, URL_MARKER_CURRENT} from '../../const';
 import useMap from '../../hooks/useMap';
-import {Icon, Marker, layerGroup} from 'leaflet'
+import {Icon, Marker, layerGroup} from 'leaflet';
 
 type MapProps = {
-  selectedPoint: OfferType;
   data: OfferType[];
+  selectedPoint: OfferType;
 }
 
 const defaultCustomIcon = new Icon({
@@ -23,64 +22,44 @@ const currentCustomIcon = new Icon({
   iconAnchor: [14, 39]
 });
 
-function Map(props: MapProps): JSX.Element {
-
-  console.log(1, props)
+function Map({data, selectedPoint}: MapProps): JSX.Element {
 
   const mapRef = useRef(null);
 
-  const city = props.data[0].city;
+  const city = data[0].city;
   const map = useMap(mapRef, city);
 
   useEffect(() => {
     if (map) {
       const placeLayer = layerGroup().addTo(map);
-      const currentCity = city;
-      map.setView([currentCity.location.latitude, currentCity.location.longitude], currentCity.location.zoom);
+      map.setView(
+        [
+          data[0].city.location.latitude,
+          data[0].city.location.longitude
+        ],
+        data[0].city.location.zoom
+      );
 
-      props.data.forEach((offer) => {
-
-        console.log(5, offer);
-
+      data.forEach((offer) => {
         const marker = new Marker({
           lat: offer.location.latitude,
           lng: offer.location.longitude
         });
-
-        console.log(4, offer)
-
         marker.setIcon(
-          props.selectedPoint !== undefined && offer && offer?.id === props.selectedPoint.id
+          selectedPoint && offer.id === selectedPoint.id
             ? currentCustomIcon
             : defaultCustomIcon
-        )
-          .addTo(placeLayer);
+        ).addTo(placeLayer);
       });
-
-      console.log(2, props.currentOffer)
-
-      if (props.currentOffer) {
-        const currentMarker = new Marker({
-          lat: props.currentOffer.location.latitude,
-          lng: props.currentOffer.location.longitude
-        });
-
-        currentMarker.setIcon(currentCustomIcon).addTo(placeLayer);
-      }
 
       return () => {
         map.removeLayer(placeLayer);
       };
     }
-  }, [map, props.data, props.selectedPoint, city, props.currentOffer]);
+  }, [map, city, data, selectedPoint]);
 
   return (
-    <section
-      className="map"
-      style={{height: '100%'}}
-      ref={mapRef}
-    >
-    </section>
+    <section className="map" ref={mapRef}></section>
   );
 }
 

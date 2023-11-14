@@ -130,3 +130,7 @@
 .places__option {
   user-select: none;
 }
+
+.property__map {
+  background-image: none;
+}
