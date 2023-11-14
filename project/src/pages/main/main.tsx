@@ -17,8 +17,6 @@ function Main(): JSX.Element {
 
   const [selectedPoint, setSelectedPoint] = useState<OfferType | null>(null);
 
-  console.log(3, selectedPoint);
-
   const onListItemHover = (listItemName:OfferType) => {
     setSelectedPoint(listItemName);
   };
