@@ -7,6 +7,7 @@ import Locations from '../../components/locations/locations';
 import PlacesSorting from '../../components/places-sorting/places-sorting';
 import {useAppSelector} from '../../index';
 import {useState} from 'react';
+import {OfferType} from '../../types/offerType';
 
 
 function Main(): JSX.Element {
@@ -14,11 +15,11 @@ function Main(): JSX.Element {
   const currentCity = useAppSelector((state) => state.city);
   const offersData = useAppSelector((state) => state.offers);
 
-  const [selectedPoint, setSelectedPoint] = useState(null);
+  const [selectedPoint, setSelectedPoint] = useState<OfferType | null>(null);
 
   console.log(3, selectedPoint);
 
-  const onListItemHover = (listItemName) => {
+  const onListItemHover = (listItemName:OfferType) => {
     setSelectedPoint(listItemName);
   };
 
