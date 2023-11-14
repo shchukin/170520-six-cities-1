@@ -7,7 +7,7 @@ import {Icon, Marker, layerGroup} from 'leaflet';
 
 type MapProps = {
   data: OfferType[];
-  selectedPoint: OfferType;
+  selectedPoint: OfferType | null;
 }
 
 const defaultCustomIcon = new Icon({

@@ -11,7 +11,7 @@ function NearPlaces(props: NearPlacesProps): JSX.Element {
 
   const [selectedPoint, setSelectedPoint] = useState<OfferType | null>(null);
 
-  const onListItemHover = (listItemName) => {
+  const onListItemHover = (listItemName:OfferType) => {
     setSelectedPoint(listItemName);
   };
 
