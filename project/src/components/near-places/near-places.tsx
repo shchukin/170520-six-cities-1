@@ -11,7 +11,7 @@ function NearPlaces(props: NearPlacesProps): JSX.Element {
 
   const [selectedPoint, setSelectedPoint] = useState<OfferType | null>(null);
 
-  const onListItemHover = (listItemName:OfferType) => {
+  const onPlaceCardHover = (listItemName:OfferType) => {
     setSelectedPoint(listItemName);
   };
 
@@ -27,7 +27,7 @@ function NearPlaces(props: NearPlacesProps): JSX.Element {
           </h2>
           <div className="near-places__list">
             {
-              props.data.map((element, index) => <div className={'near-places__card'} key={element.id}><PlaceCard data={element} onListItemHover={onListItemHover}/></div>)
+              props.data.map((element, index) => <div className={'near-places__card'} key={element.id}><PlaceCard data={element} onPlaceCardHover={onPlaceCardHover}/></div>)
             }
           </div>
         </section>

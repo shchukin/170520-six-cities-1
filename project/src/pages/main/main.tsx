@@ -17,7 +17,7 @@ function Main(): JSX.Element {
 
   const [selectedPoint, setSelectedPoint] = useState<OfferType | null>(null);
 
-  const onListItemHover = (listItemName:OfferType) => {
+  const onPlaceCardHover = (listItemName:OfferType) => {
     setSelectedPoint(listItemName);
   };
 
@@ -36,7 +36,7 @@ function Main(): JSX.Element {
               <b className="places__found">312 places to stay in {currentCity}</b>
               <PlacesSorting/>
               <div className="cities__places-list places__list tabs__content">{
-                offersData.slice(0, settings.OffersAmountOnMainPage).map((element) => <div className={'cities__card'} key={element.id}><PlaceCard data={element} onListItemHover={onListItemHover}/></div>)
+                offersData.slice(0, settings.OffersAmountOnMainPage).map((element) => <div className={'cities__card'} key={element.id}><PlaceCard data={element} onPlaceCardHover={onPlaceCardHover}/></div>)
               }
               </div>
               <Footer noContainer/>
