@@ -12,7 +12,7 @@ type PlaceCardProps = {
 function PlaceCard(props: PlaceCardProps): JSX.Element {
 
   const listItemHoverHandler = () => {
-    props.onListItemHover(props.data);
+    props.onListItemHover?.(props.data);
   };
 
   return (
