@@ -12,7 +12,14 @@ const citiesList = [
   'Dusseldorf'
 ];
 
-const initialState: { sort: string; city: string; offers: OfferType[]; authorizationStatus: any } = {
+type InitalStateType = {
+  sort: string;
+  city: string;
+  offers: OfferType[];
+  authorizationStatus: AuthorizationStatus;
+}
+
+const initialState: InitalStateType = {
   sort: SORT.Popular,
   city: citiesList[0],
   offers: [
