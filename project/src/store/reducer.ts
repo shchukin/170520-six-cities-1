@@ -1,7 +1,7 @@
 import {createReducer} from '@reduxjs/toolkit';
-import {fetchOffers, changeCity, changeSort} from './action';
+import {fetchOffers, changeCity, changeSort, requireAuthorization} from './action';
 import {OfferType} from '../types/offerType';
-import {SORT} from '../const';
+import {AuthorizationStatus, SORT} from '../const';
 
 const citiesList = [
   'Paris',
@@ -12,7 +12,7 @@ const citiesList = [
   'Dusseldorf'
 ];
 
-const initialState: { sort: string; city: string; offers: OfferType[] } = {
+const initialState: { sort: string; city: string; offers: OfferType[]; authorizationStatus: any } = {
   sort: SORT.Popular,
   city: citiesList[0],
   offers: [
@@ -118,7 +118,8 @@ const initialState: { sort: string; city: string; offers: OfferType[] } = {
         'name': 'Amsterdam'
       }
     }
-  ]
+  ],
+  authorizationStatus: AuthorizationStatus.Unknown,
 };
 
 const cityReducer = createReducer(initialState, (builder) => {
@@ -131,6 +132,9 @@ const cityReducer = createReducer(initialState, (builder) => {
     })
     .addCase(fetchOffers, (state, action) => {
       state.offers = action.payload.offers;
+    })
+    .addCase(requireAuthorization, (state, action) => {
+      state.authorizationStatus = action.payload;
     });
 });
 

@@ -1,5 +1,6 @@
 import {createAction} from '@reduxjs/toolkit';
 import {OfferType} from '../types/offerType';
+import {AuthorizationStatus} from '../const';
 
 export const changeSort = createAction('SORT', (sort: string) => ({
   payload: {sort}
@@ -124,3 +125,5 @@ export const fetchOffers = createAction('FETCH_OFFER', () => {
     },
   };
 });
+
+export const requireAuthorization = createAction<AuthorizationStatus>('REQUIRE_AUTHORIZATION');
